@@ -1,2 +1,2 @@
-# Damer
-Database 2 project
+# Team Damer - Graph Database
+Welcome to the IMDb Graph Database! In this project, we harness the power of graph databases to delve deeper into the world of movies and TV shows. Graph databases excel at representing complex relationships between data, and for [IMDb](https://developer.imdb.com/non-commercial-datasets), this means uncovering connections between actors, directors, genres, and more. Our graph database offers an intuitive and efficient way to explore the intricate web of cinematic information, making it an invaluable resource for movie enthusiasts, data analysts, and developers alike.
