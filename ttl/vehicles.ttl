@@ -1,0 +1,510 @@
+@prefix ns1: <http://www.semanticweb.org/ontologies/database2/project/starwars/example10/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:vehicle14 a ns1:Vehicle ;
+    ns1:VehicleClass "airspeeder"^^xsd:string ;
+    ns1:cargoCapacity "10"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "4.5"^^xsd:string ;
+    ns1:manufacturer "Incom corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "650"^^xsd:string ;
+    ns1:model "t-47 airspeeder"^^xsd:string ;
+    ns1:name "Snowspeeder"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle16 a ns1:Vehicle ;
+    ns1:VehicleClass "space/planetary bomber"^^xsd:string ;
+    ns1:cargoCapacity "none"^^xsd:string ;
+    ns1:consumables "2 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "7.8"^^xsd:string ;
+    ns1:manufacturer "Sienar Fleet Systems"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "850"^^xsd:string ;
+    ns1:model "TIE/sa bomber"^^xsd:string ;
+    ns1:name "TIE bomber"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle18 a ns1:Vehicle ;
+    ns1:VehicleClass "assault walker"^^xsd:string ;
+    ns1:cargoCapacity "1000"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "5"^^xsd:string ;
+    ns1:length "20"^^xsd:string ;
+    ns1:manufacturer "Kuat Drive Yards, Imperial Department of Military Research"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "60"^^xsd:string ;
+    ns1:model "All Terrain Armored Transport"^^xsd:string ;
+    ns1:name "AT-AT"^^xsd:string ;
+    ns1:passengers "40"^^xsd:string .
+
+ns1:vehicle19 a ns1:Vehicle ;
+    ns1:VehicleClass "walker"^^xsd:string ;
+    ns1:cargoCapacity "200"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "2"^^xsd:string ;
+    ns1:manufacturer "Kuat Drive Yards, Imperial Department of Military Research"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "90"^^xsd:string ;
+    ns1:model "All Terrain Scout Transport"^^xsd:string ;
+    ns1:name "AT-ST"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle20 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "10"^^xsd:string ;
+    ns1:consumables "1 day"^^xsd:string ;
+    ns1:costInCredits "75000"^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "7"^^xsd:string ;
+    ns1:manufacturer "Bespin Motors"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1500"^^xsd:string ;
+    ns1:model "Storm IV Twin-Pod"^^xsd:string ;
+    ns1:name "Storm IV Twin-Pod cloud car"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle24 a ns1:Vehicle ;
+    ns1:VehicleClass "sail barge"^^xsd:string ;
+    ns1:cargoCapacity "2000000"^^xsd:string ;
+    ns1:consumables "Live food tanks"^^xsd:string ;
+    ns1:costInCredits "285000"^^xsd:string ;
+    ns1:crew "26"^^xsd:string ;
+    ns1:length "30"^^xsd:string ;
+    ns1:manufacturer "Ubrikkian Industries Custom Vehicle Division"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "100"^^xsd:string ;
+    ns1:model "Modified Luxury Sail Barge"^^xsd:string ;
+    ns1:name "Sail barge"^^xsd:string ;
+    ns1:passengers "500"^^xsd:string .
+
+ns1:vehicle25 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft cargo skiff"^^xsd:string ;
+    ns1:cargoCapacity "135000"^^xsd:string ;
+    ns1:consumables "1 day"^^xsd:string ;
+    ns1:costInCredits "8000"^^xsd:string ;
+    ns1:crew "5"^^xsd:string ;
+    ns1:length "9.5"^^xsd:string ;
+    ns1:manufacturer "Ubrikkian Industries"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "250"^^xsd:string ;
+    ns1:model "Bantha-II"^^xsd:string ;
+    ns1:name "Bantha-II cargo skiff"^^xsd:string ;
+    ns1:passengers "16"^^xsd:string .
+
+ns1:vehicle26 a ns1:Vehicle ;
+    ns1:VehicleClass "starfighter"^^xsd:string ;
+    ns1:cargoCapacity "75"^^xsd:string ;
+    ns1:consumables "2 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "9.6"^^xsd:string ;
+    ns1:manufacturer "Sienar Fleet Systems"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1250"^^xsd:string ;
+    ns1:model "Twin Ion Engine Interceptor"^^xsd:string ;
+    ns1:name "TIE/IN interceptor"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle30 a ns1:Vehicle ;
+    ns1:VehicleClass "speeder"^^xsd:string ;
+    ns1:cargoCapacity "4"^^xsd:string ;
+    ns1:consumables "1 day"^^xsd:string ;
+    ns1:costInCredits "8000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "3"^^xsd:string ;
+    ns1:manufacturer "Aratech Repulsor Company"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "360"^^xsd:string ;
+    ns1:model "74-Z speeder bike"^^xsd:string ;
+    ns1:name "Imperial Speeder Bike"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle33 a ns1:Vehicle ;
+    ns1:VehicleClass "starfighter"^^xsd:string ;
+    ns1:cargoCapacity "0"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "0"^^xsd:string ;
+    ns1:length "3.5"^^xsd:string ;
+    ns1:manufacturer "Haor Chall Engineering, Baktoid Armor Workshop"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1200"^^xsd:string ;
+    ns1:model "Vulture-class droid starfighter"^^xsd:string ;
+    ns1:name "Vulture Droid"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle34 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "12000"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits "138000"^^xsd:string ;
+    ns1:crew "4"^^xsd:string ;
+    ns1:length "31"^^xsd:string ;
+    ns1:manufacturer "Baktoid Armor Workshop"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "35"^^xsd:string ;
+    ns1:model "Multi-Troop Transport"^^xsd:string ;
+    ns1:name "Multi-Troop Transport"^^xsd:string ;
+    ns1:passengers "112"^^xsd:string .
+
+ns1:vehicle35 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity ""^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "4"^^xsd:string ;
+    ns1:length "9.75"^^xsd:string ;
+    ns1:manufacturer "Baktoid Armor Workshop"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "55"^^xsd:string ;
+    ns1:model "Armoured Assault Tank"^^xsd:string ;
+    ns1:name "Armored Assault Tank"^^xsd:string ;
+    ns1:passengers "6"^^xsd:string .
+
+ns1:vehicle36 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "none"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "2500"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "2"^^xsd:string ;
+    ns1:manufacturer "Baktoid Armor Workshop"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "400"^^xsd:string ;
+    ns1:model "Single Trooper Aerial Platform"^^xsd:string ;
+    ns1:name "Single Trooper Aerial Platform"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle37 a ns1:Vehicle ;
+    ns1:VehicleClass "landing craft"^^xsd:string ;
+    ns1:cargoCapacity "1800000"^^xsd:string ;
+    ns1:consumables "1 day"^^xsd:string ;
+    ns1:costInCredits "200000"^^xsd:string ;
+    ns1:crew "140"^^xsd:string ;
+    ns1:length "210"^^xsd:string ;
+    ns1:manufacturer "Haor Chall Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "587"^^xsd:string ;
+    ns1:model "C-9979 landing craft"^^xsd:string ;
+    ns1:name "C-9979 landing craft"^^xsd:string ;
+    ns1:passengers "284"^^xsd:string .
+
+ns1:vehicle38 a ns1:Vehicle ;
+    ns1:VehicleClass "submarine"^^xsd:string ;
+    ns1:cargoCapacity "1600"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "15"^^xsd:string ;
+    ns1:manufacturer "Otoh Gunga Bongameken Cooperative"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "85"^^xsd:string ;
+    ns1:model "Tribubble bongo"^^xsd:string ;
+    ns1:name "Tribubble bongo"^^xsd:string ;
+    ns1:passengers "2"^^xsd:string .
+
+ns1:vehicle4 a ns1:Vehicle ;
+    ns1:VehicleClass "wheeled"^^xsd:string ;
+    ns1:cargoCapacity "50000"^^xsd:string ;
+    ns1:consumables "2 months"^^xsd:string ;
+    ns1:costInCredits "150000"^^xsd:string ;
+    ns1:crew "46"^^xsd:string ;
+    ns1:length "36.8"^^xsd:string ;
+    ns1:manufacturer "Corellia Mining Corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "30"^^xsd:string ;
+    ns1:model "Digger Crawler"^^xsd:string ;
+    ns1:name "Sand Crawler"^^xsd:string ;
+    ns1:passengers "30"^^xsd:string .
+
+ns1:vehicle42 a ns1:Vehicle ;
+    ns1:VehicleClass "speeder"^^xsd:string ;
+    ns1:cargoCapacity "2"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits "4000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "1.5"^^xsd:string ;
+    ns1:manufacturer "Razalon"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "180"^^xsd:string ;
+    ns1:model "FC-20 speeder bike"^^xsd:string ;
+    ns1:name "Sith speeder"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle44 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "200"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "5750"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "3.68"^^xsd:string ;
+    ns1:manufacturer "Mobquet Swoops and Speeders"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "350"^^xsd:string ;
+    ns1:model "Zephyr-G swoop bike"^^xsd:string ;
+    ns1:name "Zephyr-G swoop bike"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle45 a ns1:Vehicle ;
+    ns1:VehicleClass "airspeeder"^^xsd:string ;
+    ns1:cargoCapacity "80"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "6.6"^^xsd:string ;
+    ns1:manufacturer "Desler Gizh Outworld Mobility Corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "800"^^xsd:string ;
+    ns1:model "Koro-2 Exodrive airspeeder"^^xsd:string ;
+    ns1:name "Koro-2 Exodrive airspeeder"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle46 a ns1:Vehicle ;
+    ns1:VehicleClass "airspeeder"^^xsd:string ;
+    ns1:cargoCapacity ""^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "6.23"^^xsd:string ;
+    ns1:manufacturer "Narglatch AirTech prefabricated kit"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "720"^^xsd:string ;
+    ns1:model "XJ-6 airspeeder"^^xsd:string ;
+    ns1:name "XJ-6 airspeeder"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle50 a ns1:Vehicle ;
+    ns1:VehicleClass "gunship"^^xsd:string ;
+    ns1:cargoCapacity "170"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "6"^^xsd:string ;
+    ns1:length "17.4"^^xsd:string ;
+    ns1:manufacturer "Rothana Heavy Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "620"^^xsd:string ;
+    ns1:model "Low Altitude Assault Transport/infrantry"^^xsd:string ;
+    ns1:name "LAAT/i"^^xsd:string ;
+    ns1:passengers "30"^^xsd:string .
+
+ns1:vehicle51 a ns1:Vehicle ;
+    ns1:VehicleClass "gunship"^^xsd:string ;
+    ns1:cargoCapacity "40000"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "28.82"^^xsd:string ;
+    ns1:manufacturer "Rothana Heavy Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "620"^^xsd:string ;
+    ns1:model "Low Altitude Assault Transport/carrier"^^xsd:string ;
+    ns1:name "LAAT/c"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle53 a ns1:Vehicle ;
+    ns1:VehicleClass "walker"^^xsd:string ;
+    ns1:cargoCapacity "10000"^^xsd:string ;
+    ns1:consumables "21 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "6"^^xsd:string ;
+    ns1:length "13.2"^^xsd:string ;
+    ns1:manufacturer "Rothana Heavy Engineering, Kuat Drive Yards"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "60"^^xsd:string ;
+    ns1:model "All Terrain Tactical Enforcer"^^xsd:string ;
+    ns1:name "AT-TE"^^xsd:string ;
+    ns1:passengers "36"^^xsd:string .
+
+ns1:vehicle54 a ns1:Vehicle ;
+    ns1:VehicleClass "walker"^^xsd:string ;
+    ns1:cargoCapacity "500"^^xsd:string ;
+    ns1:consumables "7 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "25"^^xsd:string ;
+    ns1:length "140"^^xsd:string ;
+    ns1:manufacturer "Rothana Heavy Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "35"^^xsd:string ;
+    ns1:model "Self-Propelled Heavy Artillery"^^xsd:string ;
+    ns1:name "SPHA"^^xsd:string ;
+    ns1:passengers "30"^^xsd:string .
+
+ns1:vehicle55 a ns1:Vehicle ;
+    ns1:VehicleClass "speeder"^^xsd:string ;
+    ns1:cargoCapacity ""^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits "8000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "2"^^xsd:string ;
+    ns1:manufacturer "Huppla Pasa Tisc Shipwrights Collective"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "634"^^xsd:string ;
+    ns1:model "Flitknot speeder"^^xsd:string ;
+    ns1:name "Flitknot speeder"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle56 a ns1:Vehicle ;
+    ns1:VehicleClass "transport"^^xsd:string ;
+    ns1:cargoCapacity "1000"^^xsd:string ;
+    ns1:consumables "7 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "20"^^xsd:string ;
+    ns1:manufacturer "Haor Chall Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "880"^^xsd:string ;
+    ns1:model "Sheathipede-class transport shuttle"^^xsd:string ;
+    ns1:name "Neimoidian shuttle"^^xsd:string ;
+    ns1:passengers "6"^^xsd:string .
+
+ns1:vehicle57 a ns1:Vehicle ;
+    ns1:VehicleClass "starfighter"^^xsd:string ;
+    ns1:cargoCapacity ""^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "9.8"^^xsd:string ;
+    ns1:manufacturer "Huppla Pasa Tisc Shipwrights Collective"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "20000"^^xsd:string ;
+    ns1:model "Nantex-class territorial defense"^^xsd:string ;
+    ns1:name "Geonosian starfighter"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle6 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "50"^^xsd:string ;
+    ns1:consumables "0"^^xsd:string ;
+    ns1:costInCredits "14500"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "10.4"^^xsd:string ;
+    ns1:manufacturer "Incom Corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1200"^^xsd:string ;
+    ns1:model "T-16 skyhopper"^^xsd:string ;
+    ns1:name "T-16 skyhopper"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle60 a ns1:Vehicle ;
+    ns1:VehicleClass "wheeled walker"^^xsd:string ;
+    ns1:cargoCapacity "10"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "15000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "3.5"^^xsd:string ;
+    ns1:manufacturer "Z-Gomot Ternbuell Guppat Corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "330"^^xsd:string ;
+    ns1:model "Tsmeu-6 personal wheel bike"^^xsd:string ;
+    ns1:name "Tsmeu-6 personal wheel bike"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle62 a ns1:Vehicle ;
+    ns1:VehicleClass "fire suppression ship"^^xsd:string ;
+    ns1:cargoCapacity ""^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length ""^^xsd:string ;
+    ns1:manufacturer ""^^xsd:string ;
+    ns1:maxAtmospheringSpeed ""^^xsd:string ;
+    ns1:model "Fire suppression speeder"^^xsd:string ;
+    ns1:name "Emergency Firespeeder"^^xsd:string ;
+    ns1:passengers ""^^xsd:string .
+
+ns1:vehicle67 a ns1:Vehicle ;
+    ns1:VehicleClass "droid starfighter"^^xsd:string ;
+    ns1:cargoCapacity "0"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "20000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "5.4"^^xsd:string ;
+    ns1:manufacturer "Colla Designs, Phlac-Arphocc Automata Industries"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1180"^^xsd:string ;
+    ns1:model "tri-fighter"^^xsd:string ;
+    ns1:name "Droid tri-fighter"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle69 a ns1:Vehicle ;
+    ns1:VehicleClass "airspeeder"^^xsd:string ;
+    ns1:cargoCapacity "50"^^xsd:string ;
+    ns1:consumables "3 days"^^xsd:string ;
+    ns1:costInCredits "12125"^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "15.1"^^xsd:string ;
+    ns1:manufacturer "Appazanna Engineering Works"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "420"^^xsd:string ;
+    ns1:model "Oevvaor jet catamaran"^^xsd:string ;
+    ns1:name "Oevvaor jet catamaran"^^xsd:string ;
+    ns1:passengers "2"^^xsd:string .
+
+ns1:vehicle7 a ns1:Vehicle ;
+    ns1:VehicleClass "repulsorcraft"^^xsd:string ;
+    ns1:cargoCapacity "5"^^xsd:string ;
+    ns1:consumables ""^^xsd:string ;
+    ns1:costInCredits "10550"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "3.4"^^xsd:string ;
+    ns1:manufacturer "SoroSuub Corporation"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "250"^^xsd:string ;
+    ns1:model "X-34 landspeeder"^^xsd:string ;
+    ns1:name "X-34 landspeeder"^^xsd:string ;
+    ns1:passengers "1"^^xsd:string .
+
+ns1:vehicle70 a ns1:Vehicle ;
+    ns1:VehicleClass "air speeder"^^xsd:string ;
+    ns1:cargoCapacity "20"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "14750"^^xsd:string ;
+    ns1:crew "2"^^xsd:string ;
+    ns1:length "7"^^xsd:string ;
+    ns1:manufacturer "Appazanna Engineering Works"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "310"^^xsd:string ;
+    ns1:model "Raddaugh Gnasp fluttercraft"^^xsd:string ;
+    ns1:name "Raddaugh Gnasp fluttercraft"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle71 a ns1:Vehicle ;
+    ns1:VehicleClass "wheeled walker"^^xsd:string ;
+    ns1:cargoCapacity "30000"^^xsd:string ;
+    ns1:consumables "20 days"^^xsd:string ;
+    ns1:costInCredits "350000"^^xsd:string ;
+    ns1:crew "20"^^xsd:string ;
+    ns1:length "49.4"^^xsd:string ;
+    ns1:manufacturer "Kuat Drive Yards"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "160"^^xsd:string ;
+    ns1:model "HAVw A6 Juggernaut"^^xsd:string ;
+    ns1:name "Clone turbo tank"^^xsd:string ;
+    ns1:passengers "300"^^xsd:string .
+
+ns1:vehicle72 a ns1:Vehicle ;
+    ns1:VehicleClass "droid tank"^^xsd:string ;
+    ns1:cargoCapacity "none"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "49000"^^xsd:string ;
+    ns1:crew "0"^^xsd:string ;
+    ns1:length "10.96"^^xsd:string ;
+    ns1:manufacturer "Techno Union"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "100"^^xsd:string ;
+    ns1:model "NR-N99 Persuader-class droid enforcer"^^xsd:string ;
+    ns1:name "Corporate Alliance tank droid"^^xsd:string ;
+    ns1:passengers "4"^^xsd:string .
+
+ns1:vehicle73 a ns1:Vehicle ;
+    ns1:VehicleClass "airspeeder"^^xsd:string ;
+    ns1:cargoCapacity "0"^^xsd:string ;
+    ns1:consumables "none"^^xsd:string ;
+    ns1:costInCredits "60000"^^xsd:string ;
+    ns1:crew "0"^^xsd:string ;
+    ns1:length "12.3"^^xsd:string ;
+    ns1:manufacturer "Baktoid Fleet Ordnance, Haor Chall Engineering"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "820"^^xsd:string ;
+    ns1:model "HMP droid gunship"^^xsd:string ;
+    ns1:name "Droid gunship"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle76 a ns1:Vehicle ;
+    ns1:VehicleClass "walker"^^xsd:string ;
+    ns1:cargoCapacity "20"^^xsd:string ;
+    ns1:consumables "1 day"^^xsd:string ;
+    ns1:costInCredits "40000"^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "3.2"^^xsd:string ;
+    ns1:manufacturer "Kuat Drive Yards"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "90"^^xsd:string ;
+    ns1:model "All Terrain Recon Transport"^^xsd:string ;
+    ns1:name "AT-RT"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+
+ns1:vehicle8 a ns1:Vehicle ;
+    ns1:VehicleClass "starfighter"^^xsd:string ;
+    ns1:cargoCapacity "65"^^xsd:string ;
+    ns1:consumables "2 days"^^xsd:string ;
+    ns1:costInCredits ""^^xsd:string ;
+    ns1:crew "1"^^xsd:string ;
+    ns1:length "6.4"^^xsd:string ;
+    ns1:manufacturer "Sienar Fleet Systems"^^xsd:string ;
+    ns1:maxAtmospheringSpeed "1200"^^xsd:string ;
+    ns1:model "Twin Ion Engine/Ln Starfighter"^^xsd:string ;
+    ns1:name "TIE/LN starfighter"^^xsd:string ;
+    ns1:passengers "0"^^xsd:string .
+

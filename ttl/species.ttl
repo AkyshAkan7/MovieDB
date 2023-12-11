@@ -1,0 +1,409 @@
+@prefix ns1: <http://www.semanticweb.org/ontologies/database2/project/starwars/example10/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:specie1 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "120" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "brown, blue, green, hazel, grey, amber" ;
+    ns1:hairColors "blonde, brown, black, red" ;
+    ns1:homeworld ns1:planet9 ;
+    ns1:language "Galactic Basic" ;
+    ns1:name "Human"^^xsd:string ;
+    ns1:skinColors "caucasian, black, asian, hispanic" .
+
+ns1:specie10 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet33 ;
+    ns1:language "Sullutese" ;
+    ns1:name "Sullustan"^^xsd:string ;
+    ns1:skinColors "pale" .
+
+ns1:specie11 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "" ;
+    ns1:eyeColors "red, pink" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet18 ;
+    ns1:language "Neimoidia" ;
+    ns1:name "Neimodian"^^xsd:string ;
+    ns1:skinColors "grey, green" .
+
+ns1:specie12 a ns1:Character ;
+    ns1:averageHeight "190" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "orange" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:language "Gungan basic" ;
+    ns1:name "Gungan"^^xsd:string ;
+    ns1:skinColors "brown, green" .
+
+ns1:specie13 a ns1:Character ;
+    ns1:averageHeight "120" ;
+    ns1:averageLifespan "91" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet34 ;
+    ns1:language "Toydarian" ;
+    ns1:name "Toydarian"^^xsd:string ;
+    ns1:skinColors "blue, green, grey" .
+
+ns1:specie14 a ns1:Character ;
+    ns1:averageHeight "100" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "yellow, blue" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet35 ;
+    ns1:language "Dugese" ;
+    ns1:name "Dug"^^xsd:string ;
+    ns1:skinColors "brown, purple, grey, red" .
+
+ns1:specie15 a ns1:Character ;
+    ns1:averageHeight "200" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammals" ;
+    ns1:eyeColors "blue, brown, orange, pink" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet37 ;
+    ns1:language "Twi'leki" ;
+    ns1:name "Twi'lek"^^xsd:string ;
+    ns1:skinColors "orange, yellow, blue, green, pink, purple, tan" .
+
+ns1:specie16 a ns1:Character ;
+    ns1:averageHeight "80" ;
+    ns1:averageLifespan "79" ;
+    ns1:classification "reptile" ;
+    ns1:eyeColors "" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet38 ;
+    ns1:language "Aleena" ;
+    ns1:name "Aleena"^^xsd:string ;
+    ns1:skinColors "blue, gray" .
+
+ns1:specie17 a ns1:Character ;
+    ns1:averageHeight "100" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet39 ;
+    ns1:language "vulpterish" ;
+    ns1:name "Vulptereen"^^xsd:string ;
+    ns1:skinColors "grey" .
+
+ns1:specie18 a ns1:Character ;
+    ns1:averageHeight "125" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet40 ;
+    ns1:language "Xextese" ;
+    ns1:name "Xexto"^^xsd:string ;
+    ns1:skinColors "grey, yellow, purple" .
+
+ns1:specie19 a ns1:Character ;
+    ns1:averageHeight "200" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "" ;
+    ns1:eyeColors "orange" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet41 ;
+    ns1:language "Tundan" ;
+    ns1:name "Toong"^^xsd:string ;
+    ns1:skinColors "grey, green, yellow" .
+
+ns1:specie2 a ns1:Character ;
+    ns1:averageHeight "" ;
+    ns1:averageLifespan "indefinite" ;
+    ns1:classification "artificial" ;
+    ns1:eyeColors "" ;
+    ns1:hairColors "" ;
+    ns1:language "" ;
+    ns1:name "Droid"^^xsd:string ;
+    ns1:skinColors "" .
+
+ns1:specie20 a ns1:Character ;
+    ns1:averageHeight "200" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "hazel" ;
+    ns1:hairColors "red, blond, black, white" ;
+    ns1:homeworld ns1:planet43 ;
+    ns1:language "Cerean" ;
+    ns1:name "Cerean"^^xsd:string ;
+    ns1:skinColors "pale pink" .
+
+ns1:specie21 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "70" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet44 ;
+    ns1:language "Nautila" ;
+    ns1:name "Nautolan"^^xsd:string ;
+    ns1:skinColors "green, blue, brown, red" .
+
+ns1:specie22 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "brown, orange" ;
+    ns1:hairColors "black" ;
+    ns1:homeworld ns1:planet45 ;
+    ns1:language "Zabraki" ;
+    ns1:name "Zabrak"^^xsd:string ;
+    ns1:skinColors "pale, brown, red, orange, yellow" .
+
+ns1:specie23 a ns1:Character ;
+    ns1:averageHeight "" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "blue, indigo" ;
+    ns1:hairColors "" ;
+    ns1:homeworld ns1:planet46 ;
+    ns1:language "" ;
+    ns1:name "Tholothian"^^xsd:string ;
+    ns1:skinColors "dark" .
+
+ns1:specie24 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "" ;
+    ns1:eyeColors "orange" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet47 ;
+    ns1:language "Iktotchese" ;
+    ns1:name "Iktotchi"^^xsd:string ;
+    ns1:skinColors "pink" .
+
+ns1:specie25 a ns1:Character ;
+    ns1:averageHeight "240" ;
+    ns1:averageLifespan "86" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet48 ;
+    ns1:language "Quermian" ;
+    ns1:name "Quermian"^^xsd:string ;
+    ns1:skinColors "white" .
+
+ns1:specie26 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "70" ;
+    ns1:classification "" ;
+    ns1:eyeColors "black, silver" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet49 ;
+    ns1:language "Kel Dor" ;
+    ns1:name "Kel Dor"^^xsd:string ;
+    ns1:skinColors "peach, orange, red" .
+
+ns1:specie27 a ns1:Character ;
+    ns1:averageHeight "190" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "blue" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet50 ;
+    ns1:language "Chagria" ;
+    ns1:name "Chagrian"^^xsd:string ;
+    ns1:skinColors "blue" .
+
+ns1:specie28 a ns1:Character ;
+    ns1:averageHeight "178" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "insectoid" ;
+    ns1:eyeColors "green, hazel" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet11 ;
+    ns1:language "Geonosian" ;
+    ns1:name "Geonosian"^^xsd:string ;
+    ns1:skinColors "green, brown" .
+
+ns1:specie29 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "blue, green, red, yellow, brown, orange" ;
+    ns1:hairColors "black, brown" ;
+    ns1:homeworld ns1:planet51 ;
+    ns1:language "Mirialan" ;
+    ns1:name "Mirialan"^^xsd:string ;
+    ns1:skinColors "yellow, green" .
+
+ns1:specie3 a ns1:Character ;
+    ns1:averageHeight "210" ;
+    ns1:averageLifespan "400" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "blue, green, yellow, brown, golden, red" ;
+    ns1:hairColors "black, brown" ;
+    ns1:homeworld ns1:planet14 ;
+    ns1:language "Shyriiwook" ;
+    ns1:name "Wookiee"^^xsd:string ;
+    ns1:skinColors "gray" .
+
+ns1:specie30 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "70" ;
+    ns1:classification "reptilian" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet54 ;
+    ns1:language "Clawdite" ;
+    ns1:name "Clawdite"^^xsd:string ;
+    ns1:skinColors "green, yellow" .
+
+ns1:specie31 a ns1:Character ;
+    ns1:averageHeight "178" ;
+    ns1:averageLifespan "75" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet55 ;
+    ns1:language "besalisk" ;
+    ns1:name "Besalisk"^^xsd:string ;
+    ns1:skinColors "brown" .
+
+ns1:specie32 a ns1:Character ;
+    ns1:averageHeight "220" ;
+    ns1:averageLifespan "80" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet10 ;
+    ns1:language "Kaminoan" ;
+    ns1:name "Kaminoan"^^xsd:string ;
+    ns1:skinColors "grey, blue" .
+
+ns1:specie33 a ns1:Character ;
+    ns1:averageHeight "" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet56 ;
+    ns1:language "Skakoan" ;
+    ns1:name "Skakoan"^^xsd:string ;
+    ns1:skinColors "grey, green" .
+
+ns1:specie34 a ns1:Character ;
+    ns1:averageHeight "190" ;
+    ns1:averageLifespan "100" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet57 ;
+    ns1:language "Muun" ;
+    ns1:name "Muun"^^xsd:string ;
+    ns1:skinColors "grey, white" .
+
+ns1:specie35 a ns1:Character ;
+    ns1:averageHeight "180" ;
+    ns1:averageLifespan "94" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "red, orange, yellow, green, blue, black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet58 ;
+    ns1:language "Togruti" ;
+    ns1:name "Togruta"^^xsd:string ;
+    ns1:skinColors "red, white, orange, yellow, green, blue" .
+
+ns1:specie36 a ns1:Character ;
+    ns1:averageHeight "170" ;
+    ns1:averageLifespan "80" ;
+    ns1:classification "reptile" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet59 ;
+    ns1:language "Kaleesh" ;
+    ns1:name "Kaleesh"^^xsd:string ;
+    ns1:skinColors "brown, orange, tan" .
+
+ns1:specie37 a ns1:Character ;
+    ns1:averageHeight "190" ;
+    ns1:averageLifespan "700" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet12 ;
+    ns1:language "Utapese" ;
+    ns1:name "Pau'an"^^xsd:string ;
+    ns1:skinColors "grey" .
+
+ns1:specie4 a ns1:Character ;
+    ns1:averageHeight "170" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "sentient" ;
+    ns1:eyeColors "black" ;
+    ns1:hairColors "" ;
+    ns1:homeworld ns1:planet23 ;
+    ns1:language "Galactic Basic" ;
+    ns1:name "Rodian"^^xsd:string ;
+    ns1:skinColors "green, blue" .
+
+ns1:specie5 a ns1:Character ;
+    ns1:averageHeight "300" ;
+    ns1:averageLifespan "1000" ;
+    ns1:classification "gastropod" ;
+    ns1:eyeColors "yellow, red" ;
+    ns1:hairColors "" ;
+    ns1:homeworld ns1:planet24 ;
+    ns1:language "Huttese" ;
+    ns1:name "Hutt"^^xsd:string ;
+    ns1:skinColors "green, brown, tan" .
+
+ns1:specie6 a ns1:Character ;
+    ns1:averageHeight "66" ;
+    ns1:averageLifespan "900" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "brown, green, yellow" ;
+    ns1:hairColors "brown, white" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:language "Galactic basic" ;
+    ns1:name "Yoda's species"^^xsd:string ;
+    ns1:skinColors "green, yellow" .
+
+ns1:specie7 a ns1:Character ;
+    ns1:averageHeight "200" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "reptile" ;
+    ns1:eyeColors "yellow, orange" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet29 ;
+    ns1:language "Dosh" ;
+    ns1:name "Trandoshan"^^xsd:string ;
+    ns1:skinColors "brown, green" .
+
+ns1:specie8 a ns1:Character ;
+    ns1:averageHeight "160" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "amphibian" ;
+    ns1:eyeColors "yellow" ;
+    ns1:hairColors "none" ;
+    ns1:homeworld ns1:planet31 ;
+    ns1:language "Mon Calamarian" ;
+    ns1:name "Mon Calamari"^^xsd:string ;
+    ns1:skinColors "red, blue, brown, magenta" .
+
+ns1:specie9 a ns1:Character ;
+    ns1:averageHeight "100" ;
+    ns1:averageLifespan "" ;
+    ns1:classification "mammal" ;
+    ns1:eyeColors "orange, brown" ;
+    ns1:hairColors "white, brown, black" ;
+    ns1:homeworld ns1:planet7 ;
+    ns1:language "Ewokese" ;
+    ns1:name "Ewok"^^xsd:string ;
+    ns1:skinColors "brown" .
+

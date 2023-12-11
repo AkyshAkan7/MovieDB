@@ -1,0 +1,1053 @@
+@prefix ns1: <http://www.semanticweb.org/ontologies/database2/project/starwars/example10/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:character1 a ns1:Character ;
+    ns1:birthYear "19BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "blond" ;
+    ns1:hasStarship ns1:starship12,
+        ns1:starship22 ;
+    ns1:hasVehicle ns1:vehicle14,
+        ns1:vehicle30 ;
+    ns1:height "172" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "77" ;
+    ns1:name "Luke Skywalker"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character10 a ns1:Character ;
+    ns1:birthYear "57BBY" ;
+    ns1:eyeColor "blue-gray" ;
+    ns1:gender "male" ;
+    ns1:hairColor "auburn, white" ;
+    ns1:hasStarship ns1:starship48,
+        ns1:starship59,
+        ns1:starship64,
+        ns1:starship65,
+        ns1:starship74 ;
+    ns1:hasVehicle ns1:vehicle38 ;
+    ns1:height "182" ;
+    ns1:homeworld ns1:planet20 ;
+    ns1:mass "77" ;
+    ns1:name "Obi-Wan Kenobi"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character11 a ns1:Character ;
+    ns1:birthYear "41.9BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "blond" ;
+    ns1:hasStarship ns1:starship39,
+        ns1:starship59,
+        ns1:starship65 ;
+    ns1:hasVehicle ns1:vehicle44,
+        ns1:vehicle46 ;
+    ns1:height "188" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "84" ;
+    ns1:name "Anakin Skywalker"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character12 a ns1:Character ;
+    ns1:birthYear "64BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "auburn, grey" ;
+    ns1:height "180" ;
+    ns1:homeworld ns1:planet21 ;
+    ns1:mass "" ;
+    ns1:name "Wilhuff Tarkin"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character13 a ns1:Character ;
+    ns1:birthYear "200BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship10,
+        ns1:starship22 ;
+    ns1:hasVehicle ns1:vehicle19 ;
+    ns1:height "228" ;
+    ns1:homeworld ns1:planet14 ;
+    ns1:mass "112" ;
+    ns1:name "Chewbacca"^^xsd:string ;
+    ns1:skinColor "" ;
+    ns1:type ns1:specie3 .
+
+ns1:character14 a ns1:Character ;
+    ns1:birthYear "29BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship10,
+        ns1:starship22 ;
+    ns1:height "180" ;
+    ns1:homeworld ns1:planet22 ;
+    ns1:mass "80" ;
+    ns1:name "Han Solo"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character15 a ns1:Character ;
+    ns1:birthYear "44BBY" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "" ;
+    ns1:height "173" ;
+    ns1:homeworld ns1:planet23 ;
+    ns1:mass "74" ;
+    ns1:name "Greedo"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie4 .
+
+ns1:character16 a ns1:Character ;
+    ns1:birthYear "600BBY" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "hermaphrodite" ;
+    ns1:hairColor "" ;
+    ns1:height "175" ;
+    ns1:homeworld ns1:planet24 ;
+    ns1:mass "1,358" ;
+    ns1:name "Jabba Desilijic Tiure"^^xsd:string ;
+    ns1:skinColor "green-tan, brown" ;
+    ns1:type ns1:specie5 .
+
+ns1:character18 a ns1:Character ;
+    ns1:birthYear "21BBY" ;
+    ns1:eyeColor "hazel" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship12 ;
+    ns1:hasVehicle ns1:vehicle14 ;
+    ns1:height "170" ;
+    ns1:homeworld ns1:planet22 ;
+    ns1:mass "77" ;
+    ns1:name "Wedge Antilles"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character19 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship12 ;
+    ns1:height "180" ;
+    ns1:homeworld ns1:planet26 ;
+    ns1:mass "110" ;
+    ns1:name "Jek Tono Porkins"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character2 a ns1:Character ;
+    ns1:birthYear "112BBY" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "" ;
+    ns1:hairColor "" ;
+    ns1:height "167" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "75" ;
+    ns1:name "C-3PO"^^xsd:string ;
+    ns1:skinColor "gold" ;
+    ns1:type ns1:specie2 .
+
+ns1:character20 a ns1:Character ;
+    ns1:birthYear "896BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "white" ;
+    ns1:height "66" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "17" ;
+    ns1:name "Yoda"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie6 .
+
+ns1:character21 a ns1:Character ;
+    ns1:birthYear "82BBY" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "grey" ;
+    ns1:height "170" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "75" ;
+    ns1:name "Palpatine"^^xsd:string ;
+    ns1:skinColor "pale" .
+
+ns1:character22 a ns1:Character ;
+    ns1:birthYear "31.5BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:hasStarship ns1:starship21 ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet10 ;
+    ns1:mass "78.2" ;
+    ns1:name "Boba Fett"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character23 a ns1:Character ;
+    ns1:birthYear "15BBY" ;
+    ns1:eyeColor "red" ;
+    ns1:gender "none" ;
+    ns1:hairColor "none" ;
+    ns1:height "200" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "140" ;
+    ns1:name "IG-88"^^xsd:string ;
+    ns1:skinColor "metal" ;
+    ns1:type ns1:specie2 .
+
+ns1:character24 a ns1:Character ;
+    ns1:birthYear "53BBY" ;
+    ns1:eyeColor "red" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "190" ;
+    ns1:homeworld ns1:planet29 ;
+    ns1:mass "113" ;
+    ns1:name "Bossk"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie7 .
+
+ns1:character25 a ns1:Character ;
+    ns1:birthYear "31BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:hasStarship ns1:starship10 ;
+    ns1:height "177" ;
+    ns1:homeworld ns1:planet30 ;
+    ns1:mass "79" ;
+    ns1:name "Lando Calrissian"^^xsd:string ;
+    ns1:skinColor "dark" .
+
+ns1:character26 a ns1:Character ;
+    ns1:birthYear "37BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "175" ;
+    ns1:homeworld ns1:planet6 ;
+    ns1:mass "79" ;
+    ns1:name "Lobot"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character27 a ns1:Character ;
+    ns1:birthYear "41BBY" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "180" ;
+    ns1:homeworld ns1:planet31 ;
+    ns1:mass "83" ;
+    ns1:name "Ackbar"^^xsd:string ;
+    ns1:skinColor "brown mottle" ;
+    ns1:type ns1:specie8 .
+
+ns1:character28 a ns1:Character ;
+    ns1:birthYear "48BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "auburn" ;
+    ns1:height "150" ;
+    ns1:homeworld ns1:planet32 ;
+    ns1:mass "" ;
+    ns1:name "Mon Mothma"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character29 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship28 ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "Arvel Crynyd"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character3 a ns1:Character ;
+    ns1:birthYear "33BBY" ;
+    ns1:eyeColor "red" ;
+    ns1:gender "" ;
+    ns1:hairColor "" ;
+    ns1:height "96" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "32" ;
+    ns1:name "R2-D2"^^xsd:string ;
+    ns1:skinColor "white, blue" ;
+    ns1:type ns1:specie2 .
+
+ns1:character30 a ns1:Character ;
+    ns1:birthYear "8BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:height "88" ;
+    ns1:homeworld ns1:planet7 ;
+    ns1:mass "20" ;
+    ns1:name "Wicket Systri Warrick"^^xsd:string ;
+    ns1:skinColor "brown" ;
+    ns1:type ns1:specie9 .
+
+ns1:character31 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:hasStarship ns1:starship10 ;
+    ns1:height "160" ;
+    ns1:homeworld ns1:planet33 ;
+    ns1:mass "68" ;
+    ns1:name "Nien Nunb"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie10 .
+
+ns1:character32 a ns1:Character ;
+    ns1:birthYear "92BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasVehicle ns1:vehicle38 ;
+    ns1:height "193" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "89" ;
+    ns1:name "Qui-Gon Jinn"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character33 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "red" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "191" ;
+    ns1:homeworld ns1:planet18 ;
+    ns1:mass "90" ;
+    ns1:name "Nute Gunray"^^xsd:string ;
+    ns1:skinColor "mottled green" ;
+    ns1:type ns1:specie11 .
+
+ns1:character34 a ns1:Character ;
+    ns1:birthYear "91BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "blond" ;
+    ns1:height "170" ;
+    ns1:homeworld ns1:planet9 ;
+    ns1:mass "" ;
+    ns1:name "Finis Valorum"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character35 a ns1:Character ;
+    ns1:birthYear "46BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship39,
+        ns1:starship49,
+        ns1:starship64 ;
+    ns1:height "165" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "45" ;
+    ns1:name "Padmé Amidala"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character36 a ns1:Character ;
+    ns1:birthYear "52BBY" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "196" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "66" ;
+    ns1:name "Jar Jar Binks"^^xsd:string ;
+    ns1:skinColor "orange" ;
+    ns1:type ns1:specie12 .
+
+ns1:character37 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "224" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "82" ;
+    ns1:name "Roos Tarpals"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie12 .
+
+ns1:character38 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "206" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "" ;
+    ns1:name "Rugor Nass"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie12 .
+
+ns1:character39 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:hasStarship ns1:starship40 ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "" ;
+    ns1:name "Ric Olié"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character4 a ns1:Character ;
+    ns1:birthYear "41.9BBY" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:hasStarship ns1:starship13 ;
+    ns1:height "202" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "136" ;
+    ns1:name "Darth Vader"^^xsd:string ;
+    ns1:skinColor "white" .
+
+ns1:character40 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "137" ;
+    ns1:homeworld ns1:planet34 ;
+    ns1:mass "" ;
+    ns1:name "Watto"^^xsd:string ;
+    ns1:skinColor "blue, grey" ;
+    ns1:type ns1:specie13 .
+
+ns1:character41 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "112" ;
+    ns1:homeworld ns1:planet35 ;
+    ns1:mass "40" ;
+    ns1:name "Sebulba"^^xsd:string ;
+    ns1:skinColor "grey, red" ;
+    ns1:type ns1:specie14 .
+
+ns1:character42 a ns1:Character ;
+    ns1:birthYear "62BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "" ;
+    ns1:name "Quarsh Panaka"^^xsd:string ;
+    ns1:skinColor "dark" .
+
+ns1:character43 a ns1:Character ;
+    ns1:birthYear "72BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "female" ;
+    ns1:hairColor "black" ;
+    ns1:height "163" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "" ;
+    ns1:name "Shmi Skywalker"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character44 a ns1:Character ;
+    ns1:birthYear "54BBY" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:hasStarship ns1:starship41 ;
+    ns1:hasVehicle ns1:vehicle42 ;
+    ns1:height "175" ;
+    ns1:homeworld ns1:planet36 ;
+    ns1:mass "80" ;
+    ns1:name "Darth Maul"^^xsd:string ;
+    ns1:skinColor "red" ;
+    ns1:type ns1:specie22 .
+
+ns1:character45 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "pink" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "180" ;
+    ns1:homeworld ns1:planet37 ;
+    ns1:mass "" ;
+    ns1:name "Bib Fortuna"^^xsd:string ;
+    ns1:skinColor "pale" ;
+    ns1:type ns1:specie15 .
+
+ns1:character46 a ns1:Character ;
+    ns1:birthYear "48BBY" ;
+    ns1:eyeColor "hazel" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "178" ;
+    ns1:homeworld ns1:planet37 ;
+    ns1:mass "55" ;
+    ns1:name "Ayla Secura"^^xsd:string ;
+    ns1:skinColor "blue" ;
+    ns1:type ns1:specie15 .
+
+ns1:character47 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "79" ;
+    ns1:homeworld ns1:planet38 ;
+    ns1:mass "15" ;
+    ns1:name "Ratts Tyerell"^^xsd:string ;
+    ns1:skinColor "grey, blue" ;
+    ns1:type ns1:specie16 .
+
+ns1:character48 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "94" ;
+    ns1:homeworld ns1:planet39 ;
+    ns1:mass "45" ;
+    ns1:name "Dud Bolt"^^xsd:string ;
+    ns1:skinColor "blue, grey" ;
+    ns1:type ns1:specie17 .
+
+ns1:character49 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "122" ;
+    ns1:homeworld ns1:planet40 ;
+    ns1:mass "" ;
+    ns1:name "Gasgano"^^xsd:string ;
+    ns1:skinColor "white, blue" ;
+    ns1:type ns1:specie18 .
+
+ns1:character5 a ns1:Character ;
+    ns1:birthYear "19BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:hasVehicle ns1:vehicle30 ;
+    ns1:height "150" ;
+    ns1:homeworld ns1:planet2 ;
+    ns1:mass "49" ;
+    ns1:name "Leia Organa"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character50 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "163" ;
+    ns1:homeworld ns1:planet41 ;
+    ns1:mass "65" ;
+    ns1:name "Ben Quadinaros"^^xsd:string ;
+    ns1:skinColor "grey, green, yellow" ;
+    ns1:type ns1:specie19 .
+
+ns1:character51 a ns1:Character ;
+    ns1:birthYear "72BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "188" ;
+    ns1:homeworld ns1:planet42 ;
+    ns1:mass "84" ;
+    ns1:name "Mace Windu"^^xsd:string ;
+    ns1:skinColor "dark" .
+
+ns1:character52 a ns1:Character ;
+    ns1:birthYear "92BBY" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "white" ;
+    ns1:height "198" ;
+    ns1:homeworld ns1:planet43 ;
+    ns1:mass "82" ;
+    ns1:name "Ki-Adi-Mundi"^^xsd:string ;
+    ns1:skinColor "pale" ;
+    ns1:type ns1:specie20 .
+
+ns1:character53 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "196" ;
+    ns1:homeworld ns1:planet44 ;
+    ns1:mass "87" ;
+    ns1:name "Kit Fisto"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie21 .
+
+ns1:character54 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "171" ;
+    ns1:homeworld ns1:planet45 ;
+    ns1:mass "" ;
+    ns1:name "Eeth Koth"^^xsd:string ;
+    ns1:skinColor "brown" ;
+    ns1:type ns1:specie22 .
+
+ns1:character55 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "184" ;
+    ns1:homeworld ns1:planet9 ;
+    ns1:mass "50" ;
+    ns1:name "Adi Gallia"^^xsd:string ;
+    ns1:skinColor "dark" ;
+    ns1:type ns1:specie23 .
+
+ns1:character56 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "orange" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "188" ;
+    ns1:homeworld ns1:planet47 ;
+    ns1:mass "" ;
+    ns1:name "Saesee Tiin"^^xsd:string ;
+    ns1:skinColor "pale" ;
+    ns1:type ns1:specie24 .
+
+ns1:character57 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "264" ;
+    ns1:homeworld ns1:planet48 ;
+    ns1:mass "" ;
+    ns1:name "Yarael Poof"^^xsd:string ;
+    ns1:skinColor "white" ;
+    ns1:type ns1:specie25 .
+
+ns1:character58 a ns1:Character ;
+    ns1:birthYear "22BBY" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:hasStarship ns1:starship48 ;
+    ns1:height "188" ;
+    ns1:homeworld ns1:planet49 ;
+    ns1:mass "80" ;
+    ns1:name "Plo Koon"^^xsd:string ;
+    ns1:skinColor "orange" ;
+    ns1:type ns1:specie26 .
+
+ns1:character59 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "196" ;
+    ns1:homeworld ns1:planet50 ;
+    ns1:mass "" ;
+    ns1:name "Mas Amedda"^^xsd:string ;
+    ns1:skinColor "blue" ;
+    ns1:type ns1:specie27 .
+
+ns1:character6 a ns1:Character ;
+    ns1:birthYear "52BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown, grey" ;
+    ns1:height "178" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "120" ;
+    ns1:name "Owen Lars"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character60 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:hasStarship ns1:starship39 ;
+    ns1:height "185" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "85" ;
+    ns1:name "Gregar Typho"^^xsd:string ;
+    ns1:skinColor "dark" .
+
+ns1:character61 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:height "157" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "" ;
+    ns1:name "Cordé"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character62 a ns1:Character ;
+    ns1:birthYear "82BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "" ;
+    ns1:name "Cliegg Lars"^^xsd:string ;
+    ns1:skinColor "fair" .
+
+ns1:character63 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet11 ;
+    ns1:mass "80" ;
+    ns1:name "Poggle the Lesser"^^xsd:string ;
+    ns1:skinColor "green" ;
+    ns1:type ns1:specie28 .
+
+ns1:character64 a ns1:Character ;
+    ns1:birthYear "58BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "black" ;
+    ns1:height "170" ;
+    ns1:homeworld ns1:planet51 ;
+    ns1:mass "56.2" ;
+    ns1:name "Luminara Unduli"^^xsd:string ;
+    ns1:skinColor "yellow" ;
+    ns1:type ns1:specie29 .
+
+ns1:character65 a ns1:Character ;
+    ns1:birthYear "40BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "black" ;
+    ns1:height "166" ;
+    ns1:homeworld ns1:planet51 ;
+    ns1:mass "50" ;
+    ns1:name "Barriss Offee"^^xsd:string ;
+    ns1:skinColor "yellow" ;
+    ns1:type ns1:specie29 .
+
+ns1:character66 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:height "165" ;
+    ns1:homeworld ns1:planet8 ;
+    ns1:mass "" ;
+    ns1:name "Dormé"^^xsd:string ;
+    ns1:skinColor "light" ;
+    ns1:type ns1:specie1 .
+
+ns1:character67 a ns1:Character ;
+    ns1:birthYear "102BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "white" ;
+    ns1:hasVehicle ns1:vehicle55 ;
+    ns1:height "193" ;
+    ns1:homeworld ns1:planet52 ;
+    ns1:mass "80" ;
+    ns1:name "Dooku"^^xsd:string ;
+    ns1:skinColor "fair" ;
+    ns1:type ns1:specie1 .
+
+ns1:character68 a ns1:Character ;
+    ns1:birthYear "67BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "191" ;
+    ns1:homeworld ns1:planet2 ;
+    ns1:mass "" ;
+    ns1:name "Bail Prestor Organa"^^xsd:string ;
+    ns1:skinColor "tan" ;
+    ns1:type ns1:specie1 .
+
+ns1:character69 a ns1:Character ;
+    ns1:birthYear "66BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet53 ;
+    ns1:mass "79" ;
+    ns1:name "Jango Fett"^^xsd:string ;
+    ns1:skinColor "tan" .
+
+ns1:character7 a ns1:Character ;
+    ns1:birthYear "47BBY" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:height "165" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "75" ;
+    ns1:name "Beru Whitesun lars"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character70 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "female" ;
+    ns1:hairColor "blonde" ;
+    ns1:hasVehicle ns1:vehicle45 ;
+    ns1:height "168" ;
+    ns1:homeworld ns1:planet54 ;
+    ns1:mass "55" ;
+    ns1:name "Zam Wesell"^^xsd:string ;
+    ns1:skinColor "fair, green, yellow" ;
+    ns1:type ns1:specie30 .
+
+ns1:character71 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "198" ;
+    ns1:homeworld ns1:planet55 ;
+    ns1:mass "102" ;
+    ns1:name "Dexter Jettster"^^xsd:string ;
+    ns1:skinColor "brown" ;
+    ns1:type ns1:specie31 .
+
+ns1:character72 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "229" ;
+    ns1:homeworld ns1:planet10 ;
+    ns1:mass "88" ;
+    ns1:name "Lama Su"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie32 .
+
+ns1:character73 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "213" ;
+    ns1:homeworld ns1:planet10 ;
+    ns1:mass "" ;
+    ns1:name "Taun We"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie32 .
+
+ns1:character74 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "white" ;
+    ns1:height "167" ;
+    ns1:homeworld ns1:planet9 ;
+    ns1:mass "" ;
+    ns1:name "Jocasta Nu"^^xsd:string ;
+    ns1:skinColor "fair" ;
+    ns1:type ns1:specie1 .
+
+ns1:character75 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "red, blue" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "96" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "R4-P17"^^xsd:string ;
+    ns1:skinColor "silver, red" .
+
+ns1:character76 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "193" ;
+    ns1:homeworld ns1:planet56 ;
+    ns1:mass "48" ;
+    ns1:name "Wat Tambor"^^xsd:string ;
+    ns1:skinColor "green, grey" ;
+    ns1:type ns1:specie33 .
+
+ns1:character77 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "gold" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "191" ;
+    ns1:homeworld ns1:planet57 ;
+    ns1:mass "" ;
+    ns1:name "San Hill"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie34 .
+
+ns1:character78 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "178" ;
+    ns1:homeworld ns1:planet58 ;
+    ns1:mass "57" ;
+    ns1:name "Shaak Ti"^^xsd:string ;
+    ns1:skinColor "red, blue, white" ;
+    ns1:type ns1:specie35 .
+
+ns1:character79 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "green, yellow" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:hasStarship ns1:starship74 ;
+    ns1:hasVehicle ns1:vehicle60 ;
+    ns1:height "216" ;
+    ns1:homeworld ns1:planet59 ;
+    ns1:mass "159" ;
+    ns1:name "Grievous"^^xsd:string ;
+    ns1:skinColor "brown, white" ;
+    ns1:type ns1:specie36 .
+
+ns1:character8 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "red" ;
+    ns1:gender "" ;
+    ns1:hairColor "" ;
+    ns1:height "97" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "32" ;
+    ns1:name "R5-D4"^^xsd:string ;
+    ns1:skinColor "white, red" ;
+    ns1:type ns1:specie2 .
+
+ns1:character80 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "blue" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:height "234" ;
+    ns1:homeworld ns1:planet14 ;
+    ns1:mass "136" ;
+    ns1:name "Tarfful"^^xsd:string ;
+    ns1:skinColor "brown" ;
+    ns1:type ns1:specie3 .
+
+ns1:character81 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:height "188" ;
+    ns1:homeworld ns1:planet2 ;
+    ns1:mass "79" ;
+    ns1:name "Raymus Antilles"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character82 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "white" ;
+    ns1:gender "female" ;
+    ns1:hairColor "none" ;
+    ns1:height "178" ;
+    ns1:homeworld ns1:planet60 ;
+    ns1:mass "48" ;
+    ns1:name "Sly Moore"^^xsd:string ;
+    ns1:skinColor "pale" .
+
+ns1:character83 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "male" ;
+    ns1:hairColor "none" ;
+    ns1:height "206" ;
+    ns1:homeworld ns1:planet12 ;
+    ns1:mass "80" ;
+    ns1:name "Tion Medon"^^xsd:string ;
+    ns1:skinColor "grey" ;
+    ns1:type ns1:specie37 .
+
+ns1:character84 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "dark" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "Finn"^^xsd:string ;
+    ns1:skinColor "dark" .
+
+ns1:character85 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "hazel" ;
+    ns1:gender "female" ;
+    ns1:hairColor "brown" ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "Rey"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character86 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "brown" ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "Poe Dameron"^^xsd:string ;
+    ns1:skinColor "light" .
+
+ns1:character87 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "black" ;
+    ns1:gender "none" ;
+    ns1:hairColor "none" ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "BB8"^^xsd:string ;
+    ns1:skinColor "none" .
+
+ns1:character88 a ns1:Character ;
+    ns1:birthYear "" ;
+    ns1:eyeColor "" ;
+    ns1:gender "female" ;
+    ns1:hairColor "" ;
+    ns1:height "" ;
+    ns1:homeworld ns1:planet28 ;
+    ns1:mass "" ;
+    ns1:name "Captain Phasma"^^xsd:string ;
+    ns1:skinColor "" .
+
+ns1:character9 a ns1:Character ;
+    ns1:birthYear "24BBY" ;
+    ns1:eyeColor "brown" ;
+    ns1:gender "male" ;
+    ns1:hairColor "black" ;
+    ns1:hasStarship ns1:starship12 ;
+    ns1:height "183" ;
+    ns1:homeworld ns1:planet1 ;
+    ns1:mass "84" ;
+    ns1:name "Biggs Darklighter"^^xsd:string ;
+    ns1:skinColor "light" .
+

@@ -1,0 +1,674 @@
+@prefix ns1: <http://www.semanticweb.org/ontologies/database2/project/starwars/example10/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:planet1 a ns1:Planet ;
+    ns1:climate "arid" ;
+    ns1:diameter "10465" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Tatooine"^^xsd:string ;
+    ns1:orbitalPeriod "304" ;
+    ns1:population "200000" ;
+    ns1:rotationPeriod "23" ;
+    ns1:surfaceWater "1" ;
+    ns1:terrain "desert" .
+
+ns1:planet10 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "19720" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Kamino"^^xsd:string ;
+    ns1:orbitalPeriod "463" ;
+    ns1:population "1000000000" ;
+    ns1:rotationPeriod "27" ;
+    ns1:surfaceWater "100" ;
+    ns1:terrain "ocean" .
+
+ns1:planet11 a ns1:Planet ;
+    ns1:climate "temperate, arid" ;
+    ns1:diameter "11370" ;
+    ns1:gravity "0.9 standard" ;
+    ns1:name "Geonosis"^^xsd:string ;
+    ns1:orbitalPeriod "256" ;
+    ns1:population "100000000000" ;
+    ns1:rotationPeriod "30" ;
+    ns1:surfaceWater "5" ;
+    ns1:terrain "rock, desert, mountain, barren" .
+
+ns1:planet12 a ns1:Planet ;
+    ns1:climate "temperate, arid, windy" ;
+    ns1:diameter "12900" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Utapau"^^xsd:string ;
+    ns1:orbitalPeriod "351" ;
+    ns1:population "95000000" ;
+    ns1:rotationPeriod "27" ;
+    ns1:surfaceWater "0.9" ;
+    ns1:terrain "scrublands, savanna, canyons, sinkholes" .
+
+ns1:planet13 a ns1:Planet ;
+    ns1:climate "hot" ;
+    ns1:diameter "4200" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Mustafar"^^xsd:string ;
+    ns1:orbitalPeriod "412" ;
+    ns1:population "20000" ;
+    ns1:rotationPeriod "36" ;
+    ns1:surfaceWater "0" ;
+    ns1:terrain "volcanoes, lava rivers, mountains, caves" .
+
+ns1:planet14 a ns1:Planet ;
+    ns1:climate "tropical" ;
+    ns1:diameter "12765" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Kashyyyk"^^xsd:string ;
+    ns1:orbitalPeriod "381" ;
+    ns1:population "45000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "60" ;
+    ns1:terrain "jungle, forests, lakes, rivers" .
+
+ns1:planet15 a ns1:Planet ;
+    ns1:climate "artificial temperate " ;
+    ns1:diameter "0" ;
+    ns1:gravity "0.56 standard" ;
+    ns1:name "Polis Massa"^^xsd:string ;
+    ns1:orbitalPeriod "590" ;
+    ns1:population "1000000" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "0" ;
+    ns1:terrain "airless asteroid" .
+
+ns1:planet16 a ns1:Planet ;
+    ns1:climate "frigid" ;
+    ns1:diameter "10088" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Mygeeto"^^xsd:string ;
+    ns1:orbitalPeriod "167" ;
+    ns1:population "19000000" ;
+    ns1:rotationPeriod "12" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "glaciers, mountains, ice canyons" .
+
+ns1:planet17 a ns1:Planet ;
+    ns1:climate "hot, humid" ;
+    ns1:diameter "9100" ;
+    ns1:gravity "0.75 standard" ;
+    ns1:name "Felucia"^^xsd:string ;
+    ns1:orbitalPeriod "231" ;
+    ns1:population "8500000" ;
+    ns1:rotationPeriod "34" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "fungus forests" .
+
+ns1:planet18 a ns1:Planet ;
+    ns1:climate "temperate, moist" ;
+    ns1:diameter "0" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Cato Neimoidia"^^xsd:string ;
+    ns1:orbitalPeriod "278" ;
+    ns1:population "10000000" ;
+    ns1:rotationPeriod "25" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "mountains, fields, forests, rock arches" .
+
+ns1:planet19 a ns1:Planet ;
+    ns1:climate "hot" ;
+    ns1:diameter "14920" ;
+    ns1:gravity "" ;
+    ns1:name "Saleucami"^^xsd:string ;
+    ns1:orbitalPeriod "392" ;
+    ns1:population "1400000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "caves, desert, mountains, volcanoes" .
+
+ns1:planet2 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "12500" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Alderaan"^^xsd:string ;
+    ns1:orbitalPeriod "364" ;
+    ns1:population "2000000000" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "40" ;
+    ns1:terrain "grasslands, mountains" .
+
+ns1:planet20 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "0" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Stewjon"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "grass" .
+
+ns1:planet21 a ns1:Planet ;
+    ns1:climate "polluted" ;
+    ns1:diameter "13490" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Eriadu"^^xsd:string ;
+    ns1:orbitalPeriod "360" ;
+    ns1:population "22000000000" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "cityscape" .
+
+ns1:planet22 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "11000" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Corellia"^^xsd:string ;
+    ns1:orbitalPeriod "329" ;
+    ns1:population "3000000000" ;
+    ns1:rotationPeriod "25" ;
+    ns1:surfaceWater "70" ;
+    ns1:terrain "plains, urban, hills, forests" .
+
+ns1:planet23 a ns1:Planet ;
+    ns1:climate "hot" ;
+    ns1:diameter "7549" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Rodia"^^xsd:string ;
+    ns1:orbitalPeriod "305" ;
+    ns1:population "1300000000" ;
+    ns1:rotationPeriod "29" ;
+    ns1:surfaceWater "60" ;
+    ns1:terrain "jungles, oceans, urban, swamps" .
+
+ns1:planet24 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "12150" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Nal Hutta"^^xsd:string ;
+    ns1:orbitalPeriod "413" ;
+    ns1:population "7000000000" ;
+    ns1:rotationPeriod "87" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "urban, oceans, swamps, bogs" .
+
+ns1:planet25 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "9830" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Dantooine"^^xsd:string ;
+    ns1:orbitalPeriod "378" ;
+    ns1:population "1000" ;
+    ns1:rotationPeriod "25" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "oceans, savannas, mountains, grasslands" .
+
+ns1:planet26 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "6400" ;
+    ns1:gravity "" ;
+    ns1:name "Bestine IV"^^xsd:string ;
+    ns1:orbitalPeriod "680" ;
+    ns1:population "62000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "98" ;
+    ns1:terrain "rocky islands, oceans" .
+
+ns1:planet27 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "14050" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Ord Mantell"^^xsd:string ;
+    ns1:orbitalPeriod "334" ;
+    ns1:population "4000000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "10" ;
+    ns1:terrain "plains, seas, mesas" .
+
+ns1:planet28 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "0" ;
+    ns1:gravity "" ;
+    ns1:name ""^^xsd:string ;
+    ns1:orbitalPeriod "0" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "0" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet29 a ns1:Planet ;
+    ns1:climate "arid" ;
+    ns1:diameter "0" ;
+    ns1:gravity "0.62 standard" ;
+    ns1:name "Trandosha"^^xsd:string ;
+    ns1:orbitalPeriod "371" ;
+    ns1:population "42000000" ;
+    ns1:rotationPeriod "25" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "mountains, seas, grasslands, deserts" .
+
+ns1:planet3 a ns1:Planet ;
+    ns1:climate "temperate, tropical" ;
+    ns1:diameter "10200" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Yavin IV"^^xsd:string ;
+    ns1:orbitalPeriod "4818" ;
+    ns1:population "1000" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "8" ;
+    ns1:terrain "jungle, rainforests" .
+
+ns1:planet30 a ns1:Planet ;
+    ns1:climate "arid" ;
+    ns1:diameter "0" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Socorro"^^xsd:string ;
+    ns1:orbitalPeriod "326" ;
+    ns1:population "300000000" ;
+    ns1:rotationPeriod "20" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "deserts, mountains" .
+
+ns1:planet31 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "11030" ;
+    ns1:gravity "1" ;
+    ns1:name "Mon Cala"^^xsd:string ;
+    ns1:orbitalPeriod "398" ;
+    ns1:population "27000000000" ;
+    ns1:rotationPeriod "21" ;
+    ns1:surfaceWater "100" ;
+    ns1:terrain "oceans, reefs, islands" .
+
+ns1:planet32 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "13500" ;
+    ns1:gravity "1" ;
+    ns1:name "Chandrila"^^xsd:string ;
+    ns1:orbitalPeriod "368" ;
+    ns1:population "1200000000" ;
+    ns1:rotationPeriod "20" ;
+    ns1:surfaceWater "40" ;
+    ns1:terrain "plains, forests" .
+
+ns1:planet33 a ns1:Planet ;
+    ns1:climate "superheated" ;
+    ns1:diameter "12780" ;
+    ns1:gravity "1" ;
+    ns1:name "Sullust"^^xsd:string ;
+    ns1:orbitalPeriod "263" ;
+    ns1:population "18500000000" ;
+    ns1:rotationPeriod "20" ;
+    ns1:surfaceWater "5" ;
+    ns1:terrain "mountains, volcanoes, rocky deserts" .
+
+ns1:planet34 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "7900" ;
+    ns1:gravity "1" ;
+    ns1:name "Toydaria"^^xsd:string ;
+    ns1:orbitalPeriod "184" ;
+    ns1:population "11000000" ;
+    ns1:rotationPeriod "21" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "swamps, lakes" .
+
+ns1:planet35 a ns1:Planet ;
+    ns1:climate "arid, temperate, tropical" ;
+    ns1:diameter "18880" ;
+    ns1:gravity "1.56" ;
+    ns1:name "Malastare"^^xsd:string ;
+    ns1:orbitalPeriod "201" ;
+    ns1:population "2000000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "swamps, deserts, jungles, mountains" .
+
+ns1:planet36 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "10480" ;
+    ns1:gravity "0.9" ;
+    ns1:name "Dathomir"^^xsd:string ;
+    ns1:orbitalPeriod "491" ;
+    ns1:population "5200" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "forests, deserts, savannas" .
+
+ns1:planet37 a ns1:Planet ;
+    ns1:climate "temperate, arid, subartic" ;
+    ns1:diameter "10600" ;
+    ns1:gravity "1" ;
+    ns1:name "Ryloth"^^xsd:string ;
+    ns1:orbitalPeriod "305" ;
+    ns1:population "1500000000" ;
+    ns1:rotationPeriod "30" ;
+    ns1:surfaceWater "5" ;
+    ns1:terrain "mountains, valleys, deserts, tundra" .
+
+ns1:planet38 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Aleen Minor"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet39 a ns1:Planet ;
+    ns1:climate "temperate, artic" ;
+    ns1:diameter "14900" ;
+    ns1:gravity "1" ;
+    ns1:name "Vulpter"^^xsd:string ;
+    ns1:orbitalPeriod "391" ;
+    ns1:population "421000000" ;
+    ns1:rotationPeriod "22" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "urban, barren" .
+
+ns1:planet4 a ns1:Planet ;
+    ns1:climate "frozen" ;
+    ns1:diameter "7200" ;
+    ns1:gravity "1.1 standard" ;
+    ns1:name "Hoth"^^xsd:string ;
+    ns1:orbitalPeriod "549" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "23" ;
+    ns1:surfaceWater "100" ;
+    ns1:terrain "tundra, ice caves, mountain ranges" .
+
+ns1:planet40 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Troiken"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "desert, tundra, rainforests, mountains" .
+
+ns1:planet41 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "12190" ;
+    ns1:gravity "" ;
+    ns1:name "Tund"^^xsd:string ;
+    ns1:orbitalPeriod "1770" ;
+    ns1:population "0" ;
+    ns1:rotationPeriod "48" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "barren, ash" .
+
+ns1:planet42 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "10120" ;
+    ns1:gravity "0.98" ;
+    ns1:name "Haruun Kal"^^xsd:string ;
+    ns1:orbitalPeriod "383" ;
+    ns1:population "705300" ;
+    ns1:rotationPeriod "25" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "toxic cloudsea, plateaus, volcanoes" .
+
+ns1:planet43 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "" ;
+    ns1:gravity "1" ;
+    ns1:name "Cerea"^^xsd:string ;
+    ns1:orbitalPeriod "386" ;
+    ns1:population "450000000" ;
+    ns1:rotationPeriod "27" ;
+    ns1:surfaceWater "20" ;
+    ns1:terrain "verdant" .
+
+ns1:planet44 a ns1:Planet ;
+    ns1:climate "tropical, temperate" ;
+    ns1:diameter "15600" ;
+    ns1:gravity "1" ;
+    ns1:name "Glee Anselm"^^xsd:string ;
+    ns1:orbitalPeriod "206" ;
+    ns1:population "500000000" ;
+    ns1:rotationPeriod "33" ;
+    ns1:surfaceWater "80" ;
+    ns1:terrain "lakes, islands, swamps, seas" .
+
+ns1:planet45 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Iridonia"^^xsd:string ;
+    ns1:orbitalPeriod "413" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "29" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "rocky canyons, acid pools" .
+
+ns1:planet46 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Tholoth"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet47 a ns1:Planet ;
+    ns1:climate "arid, rocky, windy" ;
+    ns1:diameter "" ;
+    ns1:gravity "1" ;
+    ns1:name "Iktotch"^^xsd:string ;
+    ns1:orbitalPeriod "481" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "22" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "rocky" .
+
+ns1:planet48 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Quermia"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet49 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "13400" ;
+    ns1:gravity "1" ;
+    ns1:name "Dorin"^^xsd:string ;
+    ns1:orbitalPeriod "409" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "22" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet5 a ns1:Planet ;
+    ns1:climate "murky" ;
+    ns1:diameter "8900" ;
+    ns1:gravity "N/A" ;
+    ns1:name "Dagobah"^^xsd:string ;
+    ns1:orbitalPeriod "341" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "23" ;
+    ns1:surfaceWater "8" ;
+    ns1:terrain "swamp, jungles" .
+
+ns1:planet50 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "" ;
+    ns1:gravity "1" ;
+    ns1:name "Champala"^^xsd:string ;
+    ns1:orbitalPeriod "318" ;
+    ns1:population "3500000000" ;
+    ns1:rotationPeriod "27" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "oceans, rainforests, plateaus" .
+
+ns1:planet51 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Mirial"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "deserts" .
+
+ns1:planet52 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Serenno"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "rainforests, rivers, mountains" .
+
+ns1:planet53 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Concord Dawn"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "jungles, forests, deserts" .
+
+ns1:planet54 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Zolan"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet55 a ns1:Planet ;
+    ns1:climate "frigid" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Ojom"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "500000000" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "100" ;
+    ns1:terrain "oceans, glaciers" .
+
+ns1:planet56 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "" ;
+    ns1:gravity "1" ;
+    ns1:name "Skako"^^xsd:string ;
+    ns1:orbitalPeriod "384" ;
+    ns1:population "500000000000" ;
+    ns1:rotationPeriod "27" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "urban, vines" .
+
+ns1:planet57 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "13800" ;
+    ns1:gravity "1" ;
+    ns1:name "Muunilinst"^^xsd:string ;
+    ns1:orbitalPeriod "412" ;
+    ns1:population "5000000000" ;
+    ns1:rotationPeriod "28" ;
+    ns1:surfaceWater "25" ;
+    ns1:terrain "plains, forests, hills, mountains" .
+
+ns1:planet58 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "" ;
+    ns1:gravity "1" ;
+    ns1:name "Shili"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "cities, savannahs, seas, plains" .
+
+ns1:planet59 a ns1:Planet ;
+    ns1:climate "arid, temperate, tropical" ;
+    ns1:diameter "13850" ;
+    ns1:gravity "1" ;
+    ns1:name "Kalee"^^xsd:string ;
+    ns1:orbitalPeriod "378" ;
+    ns1:population "4000000000" ;
+    ns1:rotationPeriod "23" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "rainforests, cliffs, canyons, seas" .
+
+ns1:planet6 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "118000" ;
+    ns1:gravity "1.5 (surface), 1 standard (Cloud City)" ;
+    ns1:name "Bespin"^^xsd:string ;
+    ns1:orbitalPeriod "5110" ;
+    ns1:population "6000000" ;
+    ns1:rotationPeriod "12" ;
+    ns1:surfaceWater "0" ;
+    ns1:terrain "gas giant" .
+
+ns1:planet60 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Umbara"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "" .
+
+ns1:planet61 a ns1:Planet ;
+    ns1:climate "" ;
+    ns1:diameter "" ;
+    ns1:gravity "" ;
+    ns1:name "Jakku"^^xsd:string ;
+    ns1:orbitalPeriod "" ;
+    ns1:population "" ;
+    ns1:rotationPeriod "" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "deserts" .
+
+ns1:planet7 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "4900" ;
+    ns1:gravity "0.85 standard" ;
+    ns1:name "Endor"^^xsd:string ;
+    ns1:orbitalPeriod "402" ;
+    ns1:population "30000000" ;
+    ns1:rotationPeriod "18" ;
+    ns1:surfaceWater "8" ;
+    ns1:terrain "forests, mountains, lakes" .
+
+ns1:planet8 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "12120" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Naboo"^^xsd:string ;
+    ns1:orbitalPeriod "312" ;
+    ns1:population "4500000000" ;
+    ns1:rotationPeriod "26" ;
+    ns1:surfaceWater "12" ;
+    ns1:terrain "grassy hills, swamps, forests, mountains" .
+
+ns1:planet9 a ns1:Planet ;
+    ns1:climate "temperate" ;
+    ns1:diameter "12240" ;
+    ns1:gravity "1 standard" ;
+    ns1:name "Coruscant"^^xsd:string ;
+    ns1:orbitalPeriod "368" ;
+    ns1:population "1000000000000" ;
+    ns1:rotationPeriod "24" ;
+    ns1:surfaceWater "" ;
+    ns1:terrain "cityscape, mountains" .
+
