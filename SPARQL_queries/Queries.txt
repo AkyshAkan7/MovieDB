@@ -1,0 +1,13 @@
+Query1_Ordering_Planet_Diameter
+
+prefix ns1: <http://www.dei.unipd.it/database2/IMDbOntology/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+select distinct?PlanetName ?Diameter
+where { 
+    ?s a ns1:Planet ;
+       ns1:name ?PlanetName ;
+       ns1:diameter ?Diameter
+} 
+order by desc (?Diameter)
+limit 50
+
