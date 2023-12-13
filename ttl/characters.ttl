@@ -4,1068 +4,1068 @@
 
 ns1:character1 a ns1:Character ;
     rdfs:label "Luke Skywalker" ;
-    ns1:birthYear "19BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "blond" ;
+    ns1:birthYear "19BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "blond"^^xsd:string ;
     ns1:hasStarship ns1:starship12,
         ns1:starship22 ;
     ns1:hasVehicle ns1:vehicle14,
         ns1:vehicle30 ;
-    ns1:height "172" ;
+    ns1:height 172 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "77" ;
+    ns1:mass "77.0"^^xsd:float ;
     ns1:name "Luke Skywalker"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character10 a ns1:Character ;
     rdfs:label "Obi-Wan Kenobi" ;
-    ns1:birthYear "57BBY" ;
-    ns1:eyeColor "blue-gray" ;
-    ns1:gender "male" ;
-    ns1:hairColor "auburn",
-        "white" ;
+    ns1:birthYear "57BBY"^^xsd:string ;
+    ns1:eyeColor "blue-gray"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "auburn"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:hasStarship ns1:starship48,
         ns1:starship59,
         ns1:starship64,
         ns1:starship65,
         ns1:starship74 ;
     ns1:hasVehicle ns1:vehicle38 ;
-    ns1:height "182" ;
+    ns1:height 182 ;
     ns1:homeworld ns1:planet20 ;
-    ns1:mass "77" ;
+    ns1:mass "77.0"^^xsd:float ;
     ns1:name "Obi-Wan Kenobi"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character11 a ns1:Character ;
     rdfs:label "Anakin Skywalker" ;
-    ns1:birthYear "41.9BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "blond" ;
+    ns1:birthYear "41.9BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "blond"^^xsd:string ;
     ns1:hasStarship ns1:starship39,
         ns1:starship59,
         ns1:starship65 ;
     ns1:hasVehicle ns1:vehicle44,
         ns1:vehicle46 ;
-    ns1:height "188" ;
+    ns1:height 188 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "84" ;
+    ns1:mass "84.0"^^xsd:float ;
     ns1:name "Anakin Skywalker"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character12 a ns1:Character ;
     rdfs:label "Wilhuff Tarkin" ;
-    ns1:birthYear "64BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "auburn",
-        "grey" ;
-    ns1:height "180" ;
+    ns1:birthYear "64BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "auburn"^^xsd:string,
+        "grey"^^xsd:string ;
+    ns1:height 180 ;
     ns1:homeworld ns1:planet21 ;
     ns1:name "Wilhuff Tarkin"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character13 a ns1:Character ;
     rdfs:label "Chewbacca" ;
-    ns1:birthYear "200BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "200BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship10,
         ns1:starship22 ;
     ns1:hasVehicle ns1:vehicle19 ;
-    ns1:height "228" ;
+    ns1:height 228 ;
     ns1:homeworld ns1:planet14 ;
-    ns1:mass "112" ;
+    ns1:mass "112.0"^^xsd:float ;
     ns1:name "Chewbacca"^^xsd:string ;
     ns1:type ns1:specie3 .
 
 ns1:character14 a ns1:Character ;
     rdfs:label "Han Solo" ;
-    ns1:birthYear "29BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "29BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship10,
         ns1:starship22 ;
-    ns1:height "180" ;
+    ns1:height 180 ;
     ns1:homeworld ns1:planet22 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Han Solo"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character15 a ns1:Character ;
     rdfs:label "Greedo" ;
-    ns1:birthYear "44BBY" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:height "173" ;
+    ns1:birthYear "44BBY"^^xsd:string ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:height 173 ;
     ns1:homeworld ns1:planet23 ;
-    ns1:mass "74" ;
+    ns1:mass "74.0"^^xsd:float ;
     ns1:name "Greedo"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie4 .
 
 ns1:character16 a ns1:Character ;
     rdfs:label "Jabba Desilijic Tiure" ;
-    ns1:birthYear "600BBY" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "hermaphrodite" ;
-    ns1:height "175" ;
+    ns1:birthYear "600BBY"^^xsd:string ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "hermaphrodite"^^xsd:string ;
+    ns1:height 175 ;
     ns1:homeworld ns1:planet24 ;
-    ns1:mass "1,358" ;
+    ns1:mass "1358.0"^^xsd:float ;
     ns1:name "Jabba Desilijic Tiure"^^xsd:string ;
-    ns1:skinColor "brown",
-        "green-tan" ;
+    ns1:skinColor "brown"^^xsd:string,
+        "green-tan"^^xsd:string ;
     ns1:type ns1:specie5 .
 
 ns1:character18 a ns1:Character ;
     rdfs:label "Wedge Antilles" ;
-    ns1:birthYear "21BBY" ;
-    ns1:eyeColor "hazel" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "21BBY"^^xsd:string ;
+    ns1:eyeColor "hazel"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship12 ;
     ns1:hasVehicle ns1:vehicle14 ;
-    ns1:height "170" ;
+    ns1:height 170 ;
     ns1:homeworld ns1:planet22 ;
-    ns1:mass "77" ;
+    ns1:mass "77.0"^^xsd:float ;
     ns1:name "Wedge Antilles"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character19 a ns1:Character ;
     rdfs:label "Jek Tono Porkins" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship12 ;
-    ns1:height "180" ;
+    ns1:height 180 ;
     ns1:homeworld ns1:planet26 ;
-    ns1:mass "110" ;
+    ns1:mass "110.0"^^xsd:float ;
     ns1:name "Jek Tono Porkins"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character2 a ns1:Character ;
     rdfs:label "C-3PO" ;
-    ns1:birthYear "112BBY" ;
-    ns1:eyeColor "yellow" ;
-    ns1:height "167" ;
+    ns1:birthYear "112BBY"^^xsd:string ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:height 167 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "75" ;
+    ns1:mass "75.0"^^xsd:float ;
     ns1:name "C-3PO"^^xsd:string ;
-    ns1:skinColor "gold" ;
+    ns1:skinColor "gold"^^xsd:string ;
     ns1:type ns1:specie2 .
 
 ns1:character20 a ns1:Character ;
     rdfs:label "Yoda" ;
-    ns1:birthYear "896BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "white" ;
-    ns1:height "66" ;
+    ns1:birthYear "896BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "white"^^xsd:string ;
+    ns1:height 66 ;
     ns1:homeworld ns1:planet28 ;
-    ns1:mass "17" ;
+    ns1:mass "17.0"^^xsd:float ;
     ns1:name "Yoda"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie6 .
 
 ns1:character21 a ns1:Character ;
     rdfs:label "Palpatine" ;
-    ns1:birthYear "82BBY" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "grey" ;
-    ns1:height "170" ;
+    ns1:birthYear "82BBY"^^xsd:string ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "grey"^^xsd:string ;
+    ns1:height 170 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "75" ;
+    ns1:mass "75.0"^^xsd:float ;
     ns1:name "Palpatine"^^xsd:string ;
-    ns1:skinColor "pale" .
+    ns1:skinColor "pale"^^xsd:string .
 
 ns1:character22 a ns1:Character ;
     rdfs:label "Boba Fett" ;
-    ns1:birthYear "31.5BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
+    ns1:birthYear "31.5BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
     ns1:hasStarship ns1:starship21 ;
-    ns1:height "183" ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet10 ;
-    ns1:mass "78.2" ;
+    ns1:mass "78.2"^^xsd:float ;
     ns1:name "Boba Fett"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character23 a ns1:Character ;
     rdfs:label "IG-88" ;
-    ns1:birthYear "15BBY" ;
-    ns1:eyeColor "red" ;
-    ns1:gender "none" ;
-    ns1:hairColor "none" ;
-    ns1:height "200" ;
+    ns1:birthYear "15BBY"^^xsd:string ;
+    ns1:eyeColor "red"^^xsd:string ;
+    ns1:gender "none"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 200 ;
     ns1:homeworld ns1:planet28 ;
-    ns1:mass "140" ;
+    ns1:mass "140.0"^^xsd:float ;
     ns1:name "IG-88"^^xsd:string ;
-    ns1:skinColor "metal" ;
+    ns1:skinColor "metal"^^xsd:string ;
     ns1:type ns1:specie2 .
 
 ns1:character24 a ns1:Character ;
     rdfs:label "Bossk" ;
-    ns1:birthYear "53BBY" ;
-    ns1:eyeColor "red" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "190" ;
+    ns1:birthYear "53BBY"^^xsd:string ;
+    ns1:eyeColor "red"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 190 ;
     ns1:homeworld ns1:planet29 ;
-    ns1:mass "113" ;
+    ns1:mass "113.0"^^xsd:float ;
     ns1:name "Bossk"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie7 .
 
 ns1:character25 a ns1:Character ;
     rdfs:label "Lando Calrissian" ;
-    ns1:birthYear "31BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
+    ns1:birthYear "31BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
     ns1:hasStarship ns1:starship10 ;
-    ns1:height "177" ;
+    ns1:height 177 ;
     ns1:homeworld ns1:planet30 ;
-    ns1:mass "79" ;
+    ns1:mass "79.0"^^xsd:float ;
     ns1:name "Lando Calrissian"^^xsd:string ;
-    ns1:skinColor "dark" .
+    ns1:skinColor "dark"^^xsd:string .
 
 ns1:character26 a ns1:Character ;
     rdfs:label "Lobot" ;
-    ns1:birthYear "37BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "175" ;
+    ns1:birthYear "37BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 175 ;
     ns1:homeworld ns1:planet6 ;
-    ns1:mass "79" ;
+    ns1:mass "79.0"^^xsd:float ;
     ns1:name "Lobot"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character27 a ns1:Character ;
     rdfs:label "Ackbar" ;
-    ns1:birthYear "41BBY" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "180" ;
+    ns1:birthYear "41BBY"^^xsd:string ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 180 ;
     ns1:homeworld ns1:planet31 ;
-    ns1:mass "83" ;
+    ns1:mass "83.0"^^xsd:float ;
     ns1:name "Ackbar"^^xsd:string ;
-    ns1:skinColor "brown mottle" ;
+    ns1:skinColor "brown mottle"^^xsd:string ;
     ns1:type ns1:specie8 .
 
 ns1:character28 a ns1:Character ;
     rdfs:label "Mon Mothma" ;
-    ns1:birthYear "48BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "auburn" ;
-    ns1:height "150" ;
+    ns1:birthYear "48BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "auburn"^^xsd:string ;
+    ns1:height 150 ;
     ns1:homeworld ns1:planet32 ;
     ns1:name "Mon Mothma"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character29 a ns1:Character ;
     rdfs:label "Arvel Crynyd" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship28 ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "Arvel Crynyd"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character3 a ns1:Character ;
     rdfs:label "R2-D2" ;
-    ns1:birthYear "33BBY" ;
-    ns1:eyeColor "red" ;
-    ns1:height "96" ;
+    ns1:birthYear "33BBY"^^xsd:string ;
+    ns1:eyeColor "red"^^xsd:string ;
+    ns1:height 96 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "32" ;
+    ns1:mass "32.0"^^xsd:float ;
     ns1:name "R2-D2"^^xsd:string ;
-    ns1:skinColor "blue",
-        "white" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:type ns1:specie2 .
 
 ns1:character30 a ns1:Character ;
     rdfs:label "Wicket Systri Warrick" ;
-    ns1:birthYear "8BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
-    ns1:height "88" ;
+    ns1:birthYear "8BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 88 ;
     ns1:homeworld ns1:planet7 ;
-    ns1:mass "20" ;
+    ns1:mass "20.0"^^xsd:float ;
     ns1:name "Wicket Systri Warrick"^^xsd:string ;
-    ns1:skinColor "brown" ;
+    ns1:skinColor "brown"^^xsd:string ;
     ns1:type ns1:specie9 .
 
 ns1:character31 a ns1:Character ;
     rdfs:label "Nien Nunb" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:hasStarship ns1:starship10 ;
-    ns1:height "160" ;
+    ns1:height 160 ;
     ns1:homeworld ns1:planet33 ;
-    ns1:mass "68" ;
+    ns1:mass "68.0"^^xsd:float ;
     ns1:name "Nien Nunb"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie10 .
 
 ns1:character32 a ns1:Character ;
     rdfs:label "Qui-Gon Jinn" ;
-    ns1:birthYear "92BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "92BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasVehicle ns1:vehicle38 ;
-    ns1:height "193" ;
+    ns1:height 193 ;
     ns1:homeworld ns1:planet28 ;
-    ns1:mass "89" ;
+    ns1:mass "89.0"^^xsd:float ;
     ns1:name "Qui-Gon Jinn"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character33 a ns1:Character ;
     rdfs:label "Nute Gunray" ;
-    ns1:eyeColor "red" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "191" ;
+    ns1:eyeColor "red"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 191 ;
     ns1:homeworld ns1:planet18 ;
-    ns1:mass "90" ;
+    ns1:mass "90.0"^^xsd:float ;
     ns1:name "Nute Gunray"^^xsd:string ;
-    ns1:skinColor "mottled green" ;
+    ns1:skinColor "mottled green"^^xsd:string ;
     ns1:type ns1:specie11 .
 
 ns1:character34 a ns1:Character ;
     rdfs:label "Finis Valorum" ;
-    ns1:birthYear "91BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "blond" ;
-    ns1:height "170" ;
+    ns1:birthYear "91BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "blond"^^xsd:string ;
+    ns1:height 170 ;
     ns1:homeworld ns1:planet9 ;
     ns1:name "Finis Valorum"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character35 a ns1:Character ;
     rdfs:label "Padmé Amidala" ;
-    ns1:birthYear "46BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "46BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship39,
         ns1:starship49,
         ns1:starship64 ;
-    ns1:height "165" ;
+    ns1:height 165 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "45" ;
+    ns1:mass "45.0"^^xsd:float ;
     ns1:name "Padmé Amidala"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character36 a ns1:Character ;
     rdfs:label "Jar Jar Binks" ;
-    ns1:birthYear "52BBY" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "196" ;
+    ns1:birthYear "52BBY"^^xsd:string ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 196 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "66" ;
+    ns1:mass "66.0"^^xsd:float ;
     ns1:name "Jar Jar Binks"^^xsd:string ;
-    ns1:skinColor "orange" ;
+    ns1:skinColor "orange"^^xsd:string ;
     ns1:type ns1:specie12 .
 
 ns1:character37 a ns1:Character ;
     rdfs:label "Roos Tarpals" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "224" ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 224 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "82" ;
+    ns1:mass "82.0"^^xsd:float ;
     ns1:name "Roos Tarpals"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie12 .
 
 ns1:character38 a ns1:Character ;
     rdfs:label "Rugor Nass" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "206" ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 206 ;
     ns1:homeworld ns1:planet8 ;
     ns1:name "Rugor Nass"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie12 .
 
 ns1:character39 a ns1:Character ;
     rdfs:label "Ric Olié" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasStarship ns1:starship40 ;
-    ns1:height "183" ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet8 ;
     ns1:name "Ric Olié"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character4 a ns1:Character ;
     rdfs:label "Darth Vader" ;
-    ns1:birthYear "41.9BBY" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
+    ns1:birthYear "41.9BBY"^^xsd:string ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:hasStarship ns1:starship13 ;
-    ns1:height "202" ;
+    ns1:height 202 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "136" ;
+    ns1:mass "136.0"^^xsd:float ;
     ns1:name "Darth Vader"^^xsd:string ;
-    ns1:skinColor "white" .
+    ns1:skinColor "white"^^xsd:string .
 
 ns1:character40 a ns1:Character ;
     rdfs:label "Watto" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
-    ns1:height "137" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 137 ;
     ns1:homeworld ns1:planet34 ;
     ns1:name "Watto"^^xsd:string ;
-    ns1:skinColor "blue",
-        "grey" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "grey"^^xsd:string ;
     ns1:type ns1:specie13 .
 
 ns1:character41 a ns1:Character ;
     rdfs:label "Sebulba" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "112" ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 112 ;
     ns1:homeworld ns1:planet35 ;
-    ns1:mass "40" ;
+    ns1:mass "40.0"^^xsd:float ;
     ns1:name "Sebulba"^^xsd:string ;
-    ns1:skinColor "grey",
-        "red" ;
+    ns1:skinColor "grey"^^xsd:string,
+        "red"^^xsd:string ;
     ns1:type ns1:specie14 .
 
 ns1:character42 a ns1:Character ;
     rdfs:label "Quarsh Panaka" ;
-    ns1:birthYear "62BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
-    ns1:height "183" ;
+    ns1:birthYear "62BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet8 ;
     ns1:name "Quarsh Panaka"^^xsd:string ;
-    ns1:skinColor "dark" .
+    ns1:skinColor "dark"^^xsd:string .
 
 ns1:character43 a ns1:Character ;
     rdfs:label "Shmi Skywalker" ;
-    ns1:birthYear "72BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "female" ;
-    ns1:hairColor "black" ;
-    ns1:height "163" ;
+    ns1:birthYear "72BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 163 ;
     ns1:homeworld ns1:planet1 ;
     ns1:name "Shmi Skywalker"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character44 a ns1:Character ;
     rdfs:label "Darth Maul" ;
-    ns1:birthYear "54BBY" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
+    ns1:birthYear "54BBY"^^xsd:string ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:hasStarship ns1:starship41 ;
     ns1:hasVehicle ns1:vehicle42 ;
-    ns1:height "175" ;
+    ns1:height 175 ;
     ns1:homeworld ns1:planet36 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Darth Maul"^^xsd:string ;
-    ns1:skinColor "red" ;
+    ns1:skinColor "red"^^xsd:string ;
     ns1:type ns1:specie22 .
 
 ns1:character45 a ns1:Character ;
     rdfs:label "Bib Fortuna" ;
-    ns1:eyeColor "pink" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "180" ;
+    ns1:eyeColor "pink"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 180 ;
     ns1:homeworld ns1:planet37 ;
     ns1:name "Bib Fortuna"^^xsd:string ;
-    ns1:skinColor "pale" ;
+    ns1:skinColor "pale"^^xsd:string ;
     ns1:type ns1:specie15 .
 
 ns1:character46 a ns1:Character ;
     rdfs:label "Ayla Secura" ;
-    ns1:birthYear "48BBY" ;
-    ns1:eyeColor "hazel" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "178" ;
+    ns1:birthYear "48BBY"^^xsd:string ;
+    ns1:eyeColor "hazel"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 178 ;
     ns1:homeworld ns1:planet37 ;
-    ns1:mass "55" ;
+    ns1:mass "55.0"^^xsd:float ;
     ns1:name "Ayla Secura"^^xsd:string ;
-    ns1:skinColor "blue" ;
+    ns1:skinColor "blue"^^xsd:string ;
     ns1:type ns1:specie15 .
 
 ns1:character47 a ns1:Character ;
     rdfs:label "Ratts Tyerell" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "79" ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 79 ;
     ns1:homeworld ns1:planet38 ;
-    ns1:mass "15" ;
+    ns1:mass "15.0"^^xsd:float ;
     ns1:name "Ratts Tyerell"^^xsd:string ;
-    ns1:skinColor "blue",
-        "grey" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "grey"^^xsd:string ;
     ns1:type ns1:specie16 .
 
 ns1:character48 a ns1:Character ;
     rdfs:label "Dud Bolt" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "94" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 94 ;
     ns1:homeworld ns1:planet39 ;
-    ns1:mass "45" ;
+    ns1:mass "45.0"^^xsd:float ;
     ns1:name "Dud Bolt"^^xsd:string ;
-    ns1:skinColor "blue",
-        "grey" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "grey"^^xsd:string ;
     ns1:type ns1:specie17 .
 
 ns1:character49 a ns1:Character ;
     rdfs:label "Gasgano" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "122" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 122 ;
     ns1:homeworld ns1:planet40 ;
     ns1:name "Gasgano"^^xsd:string ;
-    ns1:skinColor "blue",
-        "white" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:type ns1:specie18 .
 
 ns1:character5 a ns1:Character ;
     rdfs:label "Leia Organa" ;
-    ns1:birthYear "19BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
+    ns1:birthYear "19BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:hasVehicle ns1:vehicle30 ;
-    ns1:height "150" ;
+    ns1:height 150 ;
     ns1:homeworld ns1:planet2 ;
-    ns1:mass "49" ;
+    ns1:mass "49.0"^^xsd:float ;
     ns1:name "Leia Organa"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character50 a ns1:Character ;
     rdfs:label "Ben Quadinaros" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "163" ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 163 ;
     ns1:homeworld ns1:planet41 ;
-    ns1:mass "65" ;
+    ns1:mass "65.0"^^xsd:float ;
     ns1:name "Ben Quadinaros"^^xsd:string ;
-    ns1:skinColor "green",
-        "grey",
-        "yellow" ;
+    ns1:skinColor "green"^^xsd:string,
+        "grey"^^xsd:string,
+        "yellow"^^xsd:string ;
     ns1:type ns1:specie19 .
 
 ns1:character51 a ns1:Character ;
     rdfs:label "Mace Windu" ;
-    ns1:birthYear "72BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "188" ;
+    ns1:birthYear "72BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 188 ;
     ns1:homeworld ns1:planet42 ;
-    ns1:mass "84" ;
+    ns1:mass "84.0"^^xsd:float ;
     ns1:name "Mace Windu"^^xsd:string ;
-    ns1:skinColor "dark" .
+    ns1:skinColor "dark"^^xsd:string .
 
 ns1:character52 a ns1:Character ;
     rdfs:label "Ki-Adi-Mundi" ;
-    ns1:birthYear "92BBY" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "white" ;
-    ns1:height "198" ;
+    ns1:birthYear "92BBY"^^xsd:string ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "white"^^xsd:string ;
+    ns1:height 198 ;
     ns1:homeworld ns1:planet43 ;
-    ns1:mass "82" ;
+    ns1:mass "82.0"^^xsd:float ;
     ns1:name "Ki-Adi-Mundi"^^xsd:string ;
-    ns1:skinColor "pale" ;
+    ns1:skinColor "pale"^^xsd:string ;
     ns1:type ns1:specie20 .
 
 ns1:character53 a ns1:Character ;
     rdfs:label "Kit Fisto" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "196" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 196 ;
     ns1:homeworld ns1:planet44 ;
-    ns1:mass "87" ;
+    ns1:mass "87.0"^^xsd:float ;
     ns1:name "Kit Fisto"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie21 .
 
 ns1:character54 a ns1:Character ;
     rdfs:label "Eeth Koth" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
-    ns1:height "171" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 171 ;
     ns1:homeworld ns1:planet45 ;
     ns1:name "Eeth Koth"^^xsd:string ;
-    ns1:skinColor "brown" ;
+    ns1:skinColor "brown"^^xsd:string ;
     ns1:type ns1:specie22 .
 
 ns1:character55 a ns1:Character ;
     rdfs:label "Adi Gallia" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "184" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 184 ;
     ns1:homeworld ns1:planet9 ;
-    ns1:mass "50" ;
+    ns1:mass "50.0"^^xsd:float ;
     ns1:name "Adi Gallia"^^xsd:string ;
-    ns1:skinColor "dark" ;
+    ns1:skinColor "dark"^^xsd:string ;
     ns1:type ns1:specie23 .
 
 ns1:character56 a ns1:Character ;
     rdfs:label "Saesee Tiin" ;
-    ns1:eyeColor "orange" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "188" ;
+    ns1:eyeColor "orange"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 188 ;
     ns1:homeworld ns1:planet47 ;
     ns1:name "Saesee Tiin"^^xsd:string ;
-    ns1:skinColor "pale" ;
+    ns1:skinColor "pale"^^xsd:string ;
     ns1:type ns1:specie24 .
 
 ns1:character57 a ns1:Character ;
     rdfs:label "Yarael Poof" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "264" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 264 ;
     ns1:homeworld ns1:planet48 ;
     ns1:name "Yarael Poof"^^xsd:string ;
-    ns1:skinColor "white" ;
+    ns1:skinColor "white"^^xsd:string ;
     ns1:type ns1:specie25 .
 
 ns1:character58 a ns1:Character ;
     rdfs:label "Plo Koon" ;
-    ns1:birthYear "22BBY" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
+    ns1:birthYear "22BBY"^^xsd:string ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:hasStarship ns1:starship48 ;
-    ns1:height "188" ;
+    ns1:height 188 ;
     ns1:homeworld ns1:planet49 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Plo Koon"^^xsd:string ;
-    ns1:skinColor "orange" ;
+    ns1:skinColor "orange"^^xsd:string ;
     ns1:type ns1:specie26 .
 
 ns1:character59 a ns1:Character ;
     rdfs:label "Mas Amedda" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "196" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 196 ;
     ns1:homeworld ns1:planet50 ;
     ns1:name "Mas Amedda"^^xsd:string ;
-    ns1:skinColor "blue" ;
+    ns1:skinColor "blue"^^xsd:string ;
     ns1:type ns1:specie27 .
 
 ns1:character6 a ns1:Character ;
     rdfs:label "Owen Lars" ;
-    ns1:birthYear "52BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown",
-        "grey" ;
-    ns1:height "178" ;
+    ns1:birthYear "52BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string,
+        "grey"^^xsd:string ;
+    ns1:height 178 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "120" ;
+    ns1:mass "120.0"^^xsd:float ;
     ns1:name "Owen Lars"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character60 a ns1:Character ;
     rdfs:label "Gregar Typho" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
     ns1:hasStarship ns1:starship39 ;
-    ns1:height "185" ;
+    ns1:height 185 ;
     ns1:homeworld ns1:planet8 ;
-    ns1:mass "85" ;
+    ns1:mass "85.0"^^xsd:float ;
     ns1:name "Gregar Typho"^^xsd:string ;
-    ns1:skinColor "dark" .
+    ns1:skinColor "dark"^^xsd:string .
 
 ns1:character61 a ns1:Character ;
     rdfs:label "Cordé" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
-    ns1:height "157" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 157 ;
     ns1:homeworld ns1:planet8 ;
     ns1:name "Cordé"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character62 a ns1:Character ;
     rdfs:label "Cliegg Lars" ;
-    ns1:birthYear "82BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
-    ns1:height "183" ;
+    ns1:birthYear "82BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet1 ;
     ns1:name "Cliegg Lars"^^xsd:string ;
-    ns1:skinColor "fair" .
+    ns1:skinColor "fair"^^xsd:string .
 
 ns1:character63 a ns1:Character ;
     rdfs:label "Poggle the Lesser" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "183" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet11 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Poggle the Lesser"^^xsd:string ;
-    ns1:skinColor "green" ;
+    ns1:skinColor "green"^^xsd:string ;
     ns1:type ns1:specie28 .
 
 ns1:character64 a ns1:Character ;
     rdfs:label "Luminara Unduli" ;
-    ns1:birthYear "58BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "black" ;
-    ns1:height "170" ;
+    ns1:birthYear "58BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 170 ;
     ns1:homeworld ns1:planet51 ;
-    ns1:mass "56.2" ;
+    ns1:mass "56.2"^^xsd:float ;
     ns1:name "Luminara Unduli"^^xsd:string ;
-    ns1:skinColor "yellow" ;
+    ns1:skinColor "yellow"^^xsd:string ;
     ns1:type ns1:specie29 .
 
 ns1:character65 a ns1:Character ;
     rdfs:label "Barriss Offee" ;
-    ns1:birthYear "40BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "black" ;
-    ns1:height "166" ;
+    ns1:birthYear "40BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 166 ;
     ns1:homeworld ns1:planet51 ;
-    ns1:mass "50" ;
+    ns1:mass "50.0"^^xsd:float ;
     ns1:name "Barriss Offee"^^xsd:string ;
-    ns1:skinColor "yellow" ;
+    ns1:skinColor "yellow"^^xsd:string ;
     ns1:type ns1:specie29 .
 
 ns1:character66 a ns1:Character ;
     rdfs:label "Dormé" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
-    ns1:height "165" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 165 ;
     ns1:homeworld ns1:planet8 ;
     ns1:name "Dormé"^^xsd:string ;
-    ns1:skinColor "light" ;
+    ns1:skinColor "light"^^xsd:string ;
     ns1:type ns1:specie1 .
 
 ns1:character67 a ns1:Character ;
     rdfs:label "Dooku" ;
-    ns1:birthYear "102BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "white" ;
+    ns1:birthYear "102BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "white"^^xsd:string ;
     ns1:hasVehicle ns1:vehicle55 ;
-    ns1:height "193" ;
+    ns1:height 193 ;
     ns1:homeworld ns1:planet52 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Dooku"^^xsd:string ;
-    ns1:skinColor "fair" ;
+    ns1:skinColor "fair"^^xsd:string ;
     ns1:type ns1:specie1 .
 
 ns1:character68 a ns1:Character ;
     rdfs:label "Bail Prestor Organa" ;
-    ns1:birthYear "67BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
-    ns1:height "191" ;
+    ns1:birthYear "67BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 191 ;
     ns1:homeworld ns1:planet2 ;
     ns1:name "Bail Prestor Organa"^^xsd:string ;
-    ns1:skinColor "tan" ;
+    ns1:skinColor "tan"^^xsd:string ;
     ns1:type ns1:specie1 .
 
 ns1:character69 a ns1:Character ;
     rdfs:label "Jango Fett" ;
-    ns1:birthYear "66BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
-    ns1:height "183" ;
+    ns1:birthYear "66BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet53 ;
-    ns1:mass "79" ;
+    ns1:mass "79.0"^^xsd:float ;
     ns1:name "Jango Fett"^^xsd:string ;
-    ns1:skinColor "tan" .
+    ns1:skinColor "tan"^^xsd:string .
 
 ns1:character7 a ns1:Character ;
     rdfs:label "Beru Whitesun lars" ;
-    ns1:birthYear "47BBY" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
-    ns1:height "165" ;
+    ns1:birthYear "47BBY"^^xsd:string ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 165 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "75" ;
+    ns1:mass "75.0"^^xsd:float ;
     ns1:name "Beru Whitesun lars"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character70 a ns1:Character ;
     rdfs:label "Zam Wesell" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "female" ;
-    ns1:hairColor "blonde" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "blonde"^^xsd:string ;
     ns1:hasVehicle ns1:vehicle45 ;
-    ns1:height "168" ;
+    ns1:height 168 ;
     ns1:homeworld ns1:planet54 ;
-    ns1:mass "55" ;
+    ns1:mass "55.0"^^xsd:float ;
     ns1:name "Zam Wesell"^^xsd:string ;
-    ns1:skinColor "fair",
-        "green",
-        "yellow" ;
+    ns1:skinColor "fair"^^xsd:string,
+        "green"^^xsd:string,
+        "yellow"^^xsd:string ;
     ns1:type ns1:specie30 .
 
 ns1:character71 a ns1:Character ;
     rdfs:label "Dexter Jettster" ;
-    ns1:eyeColor "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "198" ;
+    ns1:eyeColor "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 198 ;
     ns1:homeworld ns1:planet55 ;
-    ns1:mass "102" ;
+    ns1:mass "102.0"^^xsd:float ;
     ns1:name "Dexter Jettster"^^xsd:string ;
-    ns1:skinColor "brown" ;
+    ns1:skinColor "brown"^^xsd:string ;
     ns1:type ns1:specie31 .
 
 ns1:character72 a ns1:Character ;
     rdfs:label "Lama Su" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "229" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 229 ;
     ns1:homeworld ns1:planet10 ;
-    ns1:mass "88" ;
+    ns1:mass "88.0"^^xsd:float ;
     ns1:name "Lama Su"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie32 .
 
 ns1:character73 a ns1:Character ;
     rdfs:label "Taun We" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "213" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 213 ;
     ns1:homeworld ns1:planet10 ;
     ns1:name "Taun We"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie32 .
 
 ns1:character74 a ns1:Character ;
     rdfs:label "Jocasta Nu" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "female" ;
-    ns1:hairColor "white" ;
-    ns1:height "167" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "white"^^xsd:string ;
+    ns1:height 167 ;
     ns1:homeworld ns1:planet9 ;
     ns1:name "Jocasta Nu"^^xsd:string ;
-    ns1:skinColor "fair" ;
+    ns1:skinColor "fair"^^xsd:string ;
     ns1:type ns1:specie1 .
 
 ns1:character75 a ns1:Character ;
     rdfs:label "R4-P17" ;
-    ns1:eyeColor "blue",
-        "red" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "96" ;
+    ns1:eyeColor "blue"^^xsd:string,
+        "red"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 96 ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "R4-P17"^^xsd:string ;
-    ns1:skinColor "red",
-        "silver" .
+    ns1:skinColor "red"^^xsd:string,
+        "silver"^^xsd:string .
 
 ns1:character76 a ns1:Character ;
     rdfs:label "Wat Tambor" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "193" ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 193 ;
     ns1:homeworld ns1:planet56 ;
-    ns1:mass "48" ;
+    ns1:mass "48.0"^^xsd:float ;
     ns1:name "Wat Tambor"^^xsd:string ;
-    ns1:skinColor "green",
-        "grey" ;
+    ns1:skinColor "green"^^xsd:string,
+        "grey"^^xsd:string ;
     ns1:type ns1:specie33 .
 
 ns1:character77 a ns1:Character ;
     rdfs:label "San Hill" ;
-    ns1:eyeColor "gold" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "191" ;
+    ns1:eyeColor "gold"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 191 ;
     ns1:homeworld ns1:planet57 ;
     ns1:name "San Hill"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie34 .
 
 ns1:character78 a ns1:Character ;
     rdfs:label "Shaak Ti" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "178" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 178 ;
     ns1:homeworld ns1:planet58 ;
-    ns1:mass "57" ;
+    ns1:mass "57.0"^^xsd:float ;
     ns1:name "Shaak Ti"^^xsd:string ;
-    ns1:skinColor "blue",
-        "red",
-        "white" ;
+    ns1:skinColor "blue"^^xsd:string,
+        "red"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:type ns1:specie35 .
 
 ns1:character79 a ns1:Character ;
     rdfs:label "Grievous" ;
-    ns1:eyeColor "green",
-        "yellow" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
+    ns1:eyeColor "green"^^xsd:string,
+        "yellow"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:hasStarship ns1:starship74 ;
     ns1:hasVehicle ns1:vehicle60 ;
-    ns1:height "216" ;
+    ns1:height 216 ;
     ns1:homeworld ns1:planet59 ;
-    ns1:mass "159" ;
+    ns1:mass "159.0"^^xsd:float ;
     ns1:name "Grievous"^^xsd:string ;
-    ns1:skinColor "brown",
-        "white" ;
+    ns1:skinColor "brown"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:type ns1:specie36 .
 
 ns1:character8 a ns1:Character ;
     rdfs:label "R5-D4" ;
-    ns1:eyeColor "red" ;
-    ns1:height "97" ;
+    ns1:eyeColor "red"^^xsd:string ;
+    ns1:height 97 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "32" ;
+    ns1:mass "32.0"^^xsd:float ;
     ns1:name "R5-D4"^^xsd:string ;
-    ns1:skinColor "red",
-        "white" ;
+    ns1:skinColor "red"^^xsd:string,
+        "white"^^xsd:string ;
     ns1:type ns1:specie2 .
 
 ns1:character80 a ns1:Character ;
     rdfs:label "Tarfful" ;
-    ns1:eyeColor "blue" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
-    ns1:height "234" ;
+    ns1:eyeColor "blue"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 234 ;
     ns1:homeworld ns1:planet14 ;
-    ns1:mass "136" ;
+    ns1:mass "136.0"^^xsd:float ;
     ns1:name "Tarfful"^^xsd:string ;
-    ns1:skinColor "brown" ;
+    ns1:skinColor "brown"^^xsd:string ;
     ns1:type ns1:specie3 .
 
 ns1:character81 a ns1:Character ;
     rdfs:label "Raymus Antilles" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
-    ns1:height "188" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
+    ns1:height 188 ;
     ns1:homeworld ns1:planet2 ;
-    ns1:mass "79" ;
+    ns1:mass "79.0"^^xsd:float ;
     ns1:name "Raymus Antilles"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character82 a ns1:Character ;
     rdfs:label "Sly Moore" ;
-    ns1:eyeColor "white" ;
-    ns1:gender "female" ;
-    ns1:hairColor "none" ;
-    ns1:height "178" ;
+    ns1:eyeColor "white"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 178 ;
     ns1:homeworld ns1:planet60 ;
-    ns1:mass "48" ;
+    ns1:mass "48.0"^^xsd:float ;
     ns1:name "Sly Moore"^^xsd:string ;
-    ns1:skinColor "pale" .
+    ns1:skinColor "pale"^^xsd:string .
 
 ns1:character83 a ns1:Character ;
     rdfs:label "Tion Medon" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "male" ;
-    ns1:hairColor "none" ;
-    ns1:height "206" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
+    ns1:height 206 ;
     ns1:homeworld ns1:planet12 ;
-    ns1:mass "80" ;
+    ns1:mass "80.0"^^xsd:float ;
     ns1:name "Tion Medon"^^xsd:string ;
-    ns1:skinColor "grey" ;
+    ns1:skinColor "grey"^^xsd:string ;
     ns1:type ns1:specie37 .
 
 ns1:character84 a ns1:Character ;
     rdfs:label "Finn" ;
-    ns1:eyeColor "dark" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
+    ns1:eyeColor "dark"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "Finn"^^xsd:string ;
-    ns1:skinColor "dark" .
+    ns1:skinColor "dark"^^xsd:string .
 
 ns1:character85 a ns1:Character ;
     rdfs:label "Rey" ;
-    ns1:eyeColor "hazel" ;
-    ns1:gender "female" ;
-    ns1:hairColor "brown" ;
+    ns1:eyeColor "hazel"^^xsd:string ;
+    ns1:gender "female"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "Rey"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character86 a ns1:Character ;
     rdfs:label "Poe Dameron" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "brown" ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "brown"^^xsd:string ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "Poe Dameron"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
 ns1:character87 a ns1:Character ;
     rdfs:label "BB8" ;
-    ns1:eyeColor "black" ;
-    ns1:gender "none" ;
-    ns1:hairColor "none" ;
+    ns1:eyeColor "black"^^xsd:string ;
+    ns1:gender "none"^^xsd:string ;
+    ns1:hairColor "none"^^xsd:string ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "BB8"^^xsd:string ;
-    ns1:skinColor "none" .
+    ns1:skinColor "none"^^xsd:string .
 
 ns1:character88 a ns1:Character ;
     rdfs:label "Captain Phasma" ;
-    ns1:gender "female" ;
+    ns1:gender "female"^^xsd:string ;
     ns1:homeworld ns1:planet28 ;
     ns1:name "Captain Phasma"^^xsd:string .
 
 ns1:character9 a ns1:Character ;
     rdfs:label "Biggs Darklighter" ;
-    ns1:birthYear "24BBY" ;
-    ns1:eyeColor "brown" ;
-    ns1:gender "male" ;
-    ns1:hairColor "black" ;
+    ns1:birthYear "24BBY"^^xsd:string ;
+    ns1:eyeColor "brown"^^xsd:string ;
+    ns1:gender "male"^^xsd:string ;
+    ns1:hairColor "black"^^xsd:string ;
     ns1:hasStarship ns1:starship12 ;
-    ns1:height "183" ;
+    ns1:height 183 ;
     ns1:homeworld ns1:planet1 ;
-    ns1:mass "84" ;
+    ns1:mass "84.0"^^xsd:float ;
     ns1:name "Biggs Darklighter"^^xsd:string ;
-    ns1:skinColor "light" .
+    ns1:skinColor "light"^^xsd:string .
 
