@@ -1,0 +1,2669 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.dei.unipd.it/database2/IMDbOntology#"
+     xml:base="http://www.dei.unipd.it/database2/IMDbOntology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.dei.unipd.it/database2/IMDbOntology">
+        <owl:versionIRI rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology/1.0.0"/>
+        <rdfs:comment>A knowledge model for describing a star wars movie episodes based on their characters (foaf:Person), species,palnets and starships.</rdfs:comment>
+        <rdfs:isDefinedBy>Aliia Sultanova
+Akan Akysh
+Mukhtar Abenov</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasCharacter -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacter">
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isCharacterOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#Movie"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSpecies -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecies">
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isSpeciesOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasStarship -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasStarship">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransport"/>
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isStarshipOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasTransport -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasTransport">
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isTransportOf"/>
+        <rdfs:comment>Here we are organizing propertie as vehicle and starship properties share similarities. &apos;:has Transport&apos; is a super property and has got two subproperties it it. It is made for better structure of properties.
+
+:hasStarship and :hasVehicle are describing relationships capturing the transports of a character</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasVehicle">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransport"/>
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isVehicleOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isCharacterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isCharacterOf">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isPlanetOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isPlanetOf">
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#livesIn"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isSpeciesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isSpeciesOf">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isStarshipOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isStarshipOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isTransportOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isTransportOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isTransportOf"/>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#isVehicleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#isVehicleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isTransportOf"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#livesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#livesIn">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#playedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#playedBy">
+        <owl:inverseOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#playsCharacter"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#playsCharacter -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#playsCharacter">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasBirthYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasBirthYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T14:49:47Z</dc:date>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasEyeColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasEyeColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasGender">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasHairColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasHairColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasMass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasMass">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSex">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSkinColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSkinColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Movie -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Movie">
+        <rdfs:comment>A film – also called a movie, motion picture, moving picture, picture, photoplay or (slang) flick – is a work of visual art that simulates experiences and otherwise communicates ideas, stories, perceptions, feelings, beauty, or atmosphere through the use of moving images. These images are generally accompanied by sound and, more rarely, other sensory stimulations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy">
+        <rdfs:subClassOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SkywalkerSaga/Trilogy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy">
+        <rdfs:subClassOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SkywalkerSaga/Trilogy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy">
+        <rdfs:subClassOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SkywalkerSaga/Trilogy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecies"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasStarship"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isCharacterOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsFilms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#playedBy"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>In the Star Wars universe, Jedi and Sith are two opposing groups with distinct philosophies, beliefs, and practices related to the Force—a mystical energy field that exists in the galaxy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsFilms -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsFilms">
+        <rdfs:subClassOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#Movie"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacter"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Star Wars is an American epic space opera film written and directed by George Lucas, produced by Lucasfilm and distributed by 20th Century-Fox.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isPlanetOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>added all instances</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isSpeciesOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class of species from the Star Wars franchise. The class includes humans and various alien species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isStarshipOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class of starships, cruisers, battleships, and other spacecraft in the Star Wars films.</rdfs:comment>
+        <rdfs:comment>A starship, starcraft, or interstellar spacecraft is a theoretical spacecraft designed for traveling between planetary systems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class of fictional Star Wars terrestrial vehicles, including armored fighting vehicles, military aircraft, and naval ships.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#SkywalkerSaga/Trilogy -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#SkywalkerSaga/Trilogy">
+        <rdfs:subClassOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsFilms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#playsCharacter"/>
+                <owl:someValuesFrom rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#AT-ST -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#AT-ST">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ackbar -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ackbar">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:49:59Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Adi_Gallia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Adi_Gallia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">184</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:50:14Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Alderaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Alderaan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>If ever one needed an example of the irredeemable evil of the Empire, look no further than the shattered remains of Alderaan. A peaceful world of lush valleys and snow-capped mountains, Alderaan was once regarded for its natural beauty, its tranquility, and the sophistication of its arts and culture. Before the Imperial uprising, Alderaan was represented in the waning days of the Republic by such venerated politicians as Bail Organa. In fact, Alderaan was one of the earliest supporters of the Alliance to Restore the Republic, though its officials prudently kept all ties to the Rebellion secret. Despite such discretion, the Empire knew it to be a haven of rebel activity, making it a target of reprisal as soon as the Death Star was operational.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Aleen -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Aleen">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>A rocky, temperate world found in the Mid Rim of the galaxy, the planet Aleen is known for its friendly, boisterous natives, the Aleena, who have traveled throughout the galaxy. Beneath Aleen&apos;s ground are other civilizations, unknown to the surface world or to the Republic. A series of devastating groundquakes suffered by the planet during the Clone Wars exposed passageways that connected the exterior and interior worlds.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Aleena -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Aleena">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:29Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Anakin_Skywalker -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Anakin_Skywalker">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:37:01Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Arvel_Crynyd -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Arvel_Crynyd">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:38Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Attack_of_the_Clones -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Attack_of_the_Clones">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:08:57Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ayla_Secura -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ayla_Secura">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:45:22Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#BB8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#BB8">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:42Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Bail_Prestor_Organa -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bail_Prestor_Organa">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:27Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Barriss_Offee -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Barriss_Offee">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">166</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:44:08Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Belbullab-22_starfighter -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Belbullab-22_starfighter">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:34Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ben_Quadinaros -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ben_Quadinaros">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:52:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Beru_Whitesun_Lars -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Beru_Whitesun_Lars">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:41Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Besalisk -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Besalisk">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:42Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Bespin -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bespin">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Secluded from galactic turmoil by its location in a little-visited sector of space, Bespin is an astrophysical rarity. An immense gas giant surrounded by a number of moons, the planet contains a band of habitable atmosphere among its endless clouds. In this stratum of life, enterprising prospectors have established floating mining complexes devoted to extracting valuable gasses from deep within the planet. The most well known of these ventures is the opulent Cloud City, formerly under the administration of Lando Calrissian. During the tail end of the Galactic Civil War, the Empire garrisoned Bespin and took over Cloud City, though the outpost and the planet enjoyed freedom after the defeat of the Emperor at the Battle of Endor.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Bestine_IV -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bestine_IV">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Bestine IV is a planet in the Star Wars universe. It is part of the Core Worlds, a region of the galaxy that includes some of the most influential and well-developed planets. Bestine IV is the fourth planet in the Bestine system and is located in the Corellian sector.
+
+One of the notable features of Bestine IV is the presence of a city known as Bestine. Bestine is recognized as the capital city of the planet and has been referenced in Star Wars lore and media.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Bib_Fortuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bib_Fortuna">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:45:09Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Biggs_Darklighter -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Biggs_Darklighter">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:26:25Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Boba_Fett -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Boba_Fett">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.2</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:23Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Bossk -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bossk">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:52:47Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#C-3PO -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#C-3PO">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:44Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Captain_Phasma -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Captain_Phasma">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:34:19Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Cato_Neimoidia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cato_Neimoidia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>A weathly Neimoidian colony world, Cato Neimoidia&apos;s jewelled palaces and opulent bridge-cities were the pride and joy of Trade Federation barons, who sought constantly to one-up each other and dazzle guests with displays of ostentatious hospitality and luxury living.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Cerea -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cerea">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Cerea is a fictional planet in the Star Wars universe. It is the homeworld of the Cereans, a species known for their distinctive appearance, which includes an elongated head with two brains. Cereans have a humanoid body and a face that splits into two at the top of the head, allowing for the presence of two brains.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Cerean -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cerean">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:57Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Chagrian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Chagrian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:32:10Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Champala -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Champala">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Champala is a fictional planet in the Star Wars universe. It is the homeworld of the Mon Calamari species, a humanoid aquatic species known for their exceptional shipbuilding skills. The Mon Calamari are recognized for their contributions to the construction of starships, including capital ships and star cruisers.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Chandrila -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Chandrila">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Chandrila is a fictional planet in the Star Wars universe. It is part of the Core Worlds, a region of the galaxy that includes some of the most influential and well-developed planets. Chandrila is particularly notable for being the homeworld of several important characters in the Star Wars saga and for playing a role in galactic politics.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Chewbacca -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Chewbacca">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:53:08Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Cliegg_Lars -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cliegg_Lars">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:30Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Concord_Dawn -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Concord_Dawn">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Concord Dawn was a system under Mandalorian control, led by the legendary warrior Fenn Rau and his group of Protectors. While Rau entered into an agreement with the Empire, he eventually granted the rebels safe passage through the Concord Dawn system.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Cordé -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cordé">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">157</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:54:49Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Corellia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Corellia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>An ancient world in the galactic Core, Corellia is known for its people’s wanderlust and its massive shipyards. Corellia played a key role in the expansion of galactic civilization, but that was thousands of years ago. It’s now a faded industrial planet exploited by the Empire to build TIE fighters and Star Destroyers, while its formidable dockyard facilities are retrofitted to destroy all evidence of the Separatist forces. Corellians not born with money or influence hope to escape their homeworld in search of a better life.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Coruscant -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Coruscant">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Coruscant is the vibrant heart and capital of the galaxy during the age of the Empire, featuring a diverse mix of cultures and citizens spread over hundreds of levels. Once the home of the main Jedi Temple -- the central hub of Jedi training and learning for over a thousand generations and the repository of the Jedi Archives -- these traditions ended when the planet bore witness to Order 66.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Darth_Maul -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Darth_Maul">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T14:28:00Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Darth_Vader -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Darth_Vader">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dathomir -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dathomir">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>A remote planet, Dathomir is drenched in blood-red light from its central star. The planet has continents overrun by twisted vegetation, with forests of bent trees burdened by large, cocoon-like fruit. Bordering dense swamplands is the massive stone fortresses of the Nightsisters, a witch clan. The Nightsisters kept to themselves, but had on occasion been known to offer their services to those who piqued their interests. Far from the Nightsisters lived the Nightbrothers -- a tattooed clan of Zabrak warriors were subservient to their female counterparts.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dexter_Jettster -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dexter_Jettster">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:54:59Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dooku -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dooku">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:18Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dorin -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dorin">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Dorin is a fictional planet in the Star Wars universe. It is the homeworld of the Kel Dor species, recognizable for their distinctive appearance, including a mask-like face and a set of respiratory tubes. The Kel Dor are a species that requires a specific atmosphere to breathe, and Dorin provides the ideal environment for their survival.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dormé -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dormé">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:31:39Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Droid -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Droid">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:32:41Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dud_Bolt -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dud_Bolt">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:12Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Dug -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dug">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:33:27Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Eeth_Koth -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Eeth_Koth">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T14:28:15Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Endor -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Endor">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Secluded in a remote corner of the galaxy, the forest moon of Endor would easily have been overlooked by history were it not for the decisive battle that occurred there. The lush, forest home of the Ewok species is the gravesite of Darth Vader and the Empire itself. It was here that the Rebel Alliance won its most crucial victory over the Galactic Empire.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Eriadu -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Eriadu">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>At the dawn of the Empire, the mountainous Outer Rim world of Eriadu is an Imperial stronghold due to the presence of a secure compound controlled by Grand Moff Tarkin. The elite, high-ranking official holds clandestine meetings there with top advisors tasked with controlled some of the Empire&apos;s most precious resources.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ewok -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ewok">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:33:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Finis_Valorum -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Finis_Valorum">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:37Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Finn -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Finn">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:58Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Flitknot_speeder -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Flitknot_speeder">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:40Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Gasgano -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Gasgano">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:24Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Geonosian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Geonosian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:35:53Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Geonosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Geonosis">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>A harsh rocky world less than a parsec away from Tatooine, Geonosis is a ringed planet beyond the borders of the Galactic Republic. Its uninviting surface is made up of harsh, rocky desert, and the creatures that evolved on Geonosis are well equipped to survive in the brutal environment. The most advanced lifeform are the Geonosians, sentient insectoids that inhabit towering spire-hives. The Geonosians maintain large factories for the production of droids and weapons for the Separatist cause in the Clone Wars. After the Clone Wars, the Empire chose Geonosis as the construction site of the first Death Star, restricting travel to the system and sterilizing the planet’s surface.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Glee_Anselm -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Glee_Anselm">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Glee Anselm is a fictional aquatic planet in the Star Wars universe. It is the homeworld of the Nautolans, a species known for their amphibious nature and distinctive appearance. Glee Anselm is located in the Mid Rim of the galaxy, and its surface is mostly covered by oceans.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Greedo -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Greedo">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:37Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Gregar_Typho -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Gregar_Typho">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:47Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Grievous -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Grievous">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:59Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Gungan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Gungan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#H-type_Nubian_yacht -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#H-type_Nubian_yacht">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:58:02Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Han_Solo -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Han_Solo">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:06Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Haruun_Kal -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Haruun_Kal">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Haruun Kal is a fictional planet in the Star Wars universe. It is the homeworld of the Korunnai, a humanoid species native to the planet. Haruun Kal is primarily known for its appearance in the &quot;Star Wars: Republic Commando&quot; series of novels written by Karen Traviss.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Human -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Human">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:30:43Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Hutt -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Hutt">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:35:13Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#IG-88 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#IG-88">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:27Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Iktotch -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Iktotch">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Iktotch is a fictional planet in the Star Wars universe. It is the homeworld of the Iktotchi, a species known for their distinctive appearance and strong connection to the Force.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Iktotchi -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Iktotchi">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:36:36Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Imperial_Speeder_Bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Imperial_Speeder_Bike">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:52Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Imperial_shuttle -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Imperial_shuttle">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:22Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Iridonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Iridonia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Iridonia is a fictional planet in the Star Wars universe. It is the homeworld of the Zabrak species, known for their distinctive facial horns and, in some cases, facial tattoos. Iridonia is located in the Mid Rim of the galaxy.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jabba_Desilijic_Tiure -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jabba_Desilijic_Tiure">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1358</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:56:09Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jango_Fett -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jango_Fett">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:31:55Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jar_Jar_Binks -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jar_Jar_Binks">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:41Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jedi_Interceptor -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jedi_Interceptor">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:22Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jedi_starfighter -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jedi_starfighter">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:38Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jek_Tono_Porkins -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jek_Tono_Porkins">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:57:40Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Jocasta_Nu -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jocasta_Nu">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:07Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kalee -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kalee">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Kalee is a fictional planet in the Star Wars universe. It is the homeworld of the Kaleesh species. Kalee is located in the Outer Rim Territories of the galaxy. The Kaleesh are known for their distinctive appearance, including a skeletal facial structure and a set of mask-like features.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kaleesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kaleesh">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:36:47Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kamino -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kamino">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Once purged from the otherwise complete Jedi Archives was all evidence of the mysterious world of Kamino. A lonely world beyond the Outer Rim and just south of the Rishi Maze, few could have predicted that Kamino would become a key contributor to a massive shift in political power in the final days of the Republic. Kamino is a planet of endless oceans and storms. Few features mark its surface, save for massive stilt-mounted cities wherein reside the planet&apos;s natural inhabitants, the Kaminoans. From Tipoca City, the planet&apos;s prime minister rules. Lama Su and Kamino’s chief medical scientist Nala Se closely monitor the operations of Kamino&apos;s most prized export -- clones -- even after the Clone Wars reaches a conclusion.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kaminoan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kaminoan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:07Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kashyyyk -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kashyyyk">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Kashyyyk is the Wookiee homeworld, covered in dense forest. While Wookiees build their homes in the planet&apos;s trees, they are not a primitive species, and Kashyyyk architecture incorporates sophisticated technology. One of the last battles of the Clone Wars was fought here under the leadership of Yoda, with Wookiees and clones battling the Separatist droid army -- until the Emperor issued Order 66, commanding the clones to slaughter all Jedi. Yoda survived, however, with the help of natives Chewbacca and Tarfful, who used a hidden shuttle to evacuate the Jedi Master from the planet. In the aftermath, the brave Jedi Padawan Gungi, a survivor of the Jedi slaughter, was returned to what remained of his homeworld with the help of Clone Force 99.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kel_Dor -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kel_Dor">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:20Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ki-Adi-Mundi -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ki-Adi-Mundi">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:57:51Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Kit_Fisto -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kit_Fisto">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:00Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Koro-2_Exodrive_airspeeder -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Koro-2_Exodrive_airspeeder">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:25Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Lama_Su -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lama_Su">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">229</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:43:26Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Lando_Calrissian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lando_Calrissian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:12Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Leia_Organa -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Leia_Organa">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:55Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Lobot -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lobot">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:02Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Luke_Skywalker -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Luke_Skywalker">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">172</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:45Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Luminara_Unduli -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Luminara_Unduli">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56.2</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:44:20Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mace_Windu -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mace_Windu">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:37:12Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Malastare -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Malastare">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Located in the galaxy&apos;s Mid Rim, Malastare was the homeworld of the irascible Dugs, who proved loyal but difficult members of the Galactic Republic. The planet&apos;s extensive fuel reserves made it vital to the Republic war machine, and it became a critical battlefield during the Clone Wars. As a result of a massive ground battle between the Republic and the Separatists, a monstrous creature known as the Zillo Beast was released in Malastare.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mas_Amedda -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mas_Amedda">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:31Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Millennium_Falcon -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Millennium_Falcon">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:08Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mirial -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mirial">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Mirial is a fictional planet in the Star Wars universe. It is located in the Mid Rim of the galaxy and is known for its distinct culture and the Mirialan species that inhabits it.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mirialan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mirialan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:58Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mon_Cala -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mon_Cala">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Also known as Mon Calamari or Dac, Mon Cala is a a beautiful aquatic world filled with lush coral reefs and kelp forests bathed by the light of twin suns. It is home to the Mon Calamari and Quarren people. The two cultures have long clashed over their differences, but under the rule of the 82nd King of Mon Cala, Yos Kolina, these disputes were kept civil and respectful. His sudden assassination and the arrival of Separatist forces during the Clone Wars tipped the scales to civil war, with the Quarren staging an uprising against the Mon Calamari, backed by Confederacy forces and Karkaradon leader, Riff Tamson. It was up to the Jedi and Republic envoys to help young Prince Lee-Char, heir to the Mon Cala throne, restore peace to the planet.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mon_Calamari -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mon_Calamari">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:34Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mon_Mothma -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mon_Mothma">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auburn</hasHairColor>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:50Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Muun -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Muun">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:44Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Muunilinst -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Muunilinst">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Muunilinst is a fictional planet in the Star Wars universe, known for being the homeworld of the Muun species. The Muuns are tall, thin humanoids characterized by elongated heads and skeletal facial features. Muunilinst is located in the Outer Rim Territories of the galaxy.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Naboo -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>An idyllic world close to the border of the Outer Rim Territories, Naboo is inhabited by peaceful humans known as the Naboo, and an indigenous species of intelligent amphibians called the Gungans. Naboo&apos;s surface consists of swampy lakes, rolling plains and green hills. Its population centers are beautiful -- Naboo&apos;s river cities are filled with classical architecture and greenery, while the underwater Gungan settlements are a beautiful display of exotic hydrostatic bubble technology.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Naboo_Royal_Starship -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo_Royal_Starship">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <rdfs:comment>The Naboo Royal Starship boasts a strikingly beautiful design that embodies the craftsmanship that prevailed in the peaceful years of the Republic. The polished, streamlined J-type 327 Nubian vessel lacks any offensive weaponry, but does feature strong shields and a competent hyperdrive. During the Trade Federation invasion of Naboo, Queen Amidala and her retinue escaped aboard the Royal Starship. Piloted by Ric Olie, the vessel narrowly avoided the Trade Federation blockade, though its hyperdrive was damaged. The ship limped to Tatooine, where a replacement T-14 hyperdrive generator was procured.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Naboo_fighter -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo_fighter">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:57:44Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Naboo_star_skiff -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo_star_skiff">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:09Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Nal_Hutta -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nal_Hutta">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>A ringed, marshy bog planet controlled by the Hutts, Nal Hutta has long been a haven for criminal activity, far from the prying eyes of galactic authorities. Its hot atmosphere is frequently streaked by greasy rain, creating a fetid sauna in which Hutts are most comfortable. Hutt cities are built on what little firm land there is, including the sprawling spaceport market of Bilbousa. A number of floating homes also dot the bayous -- visitors traverse the bogs on repulsorlift fanboats, risking the attention of dragonsnakes and other dangerous creatures.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Nautolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nautolan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:54Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Neimodian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Neimodian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:26Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Nien_Nunb -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nien_Nunb">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:43Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Nute_Gunray -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nute_Gunray">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:54Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Obi-Wan_Kenobi -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Obi-Wan_Kenobi">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:15Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ojom -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ojom">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Ojom is a fictional planet in the Star Wars universe. It is part of the Star Wars Expanded Universe, also known as &quot;Legends,&quot; which includes material produced outside of the original films and television series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Owen_Lars -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Owen_Lars">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:10Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Padmé_Amidala -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Padmé_Amidala">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:50Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Palpatine -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Palpatine">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Plo_Koon -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Plo_Koon">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:05Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Poe_Dameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Poe_Dameron">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:48Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Poggle_the_Lesser -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Poggle_the_Lesser">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:15Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Quarsh_Panaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Quarsh_Panaka">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:04Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Quermia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Quermia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Quermia is a fictional planet in the Star Wars universe. It is the homeworld of the Quermians, a species known for their tall and slender bodies. Quermia is located in the Mid Rim of the galaxy.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Quermian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Quermian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:59Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Qui-Gon_Jinn -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Qui-Gon_Jinn">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:20Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#R2-D2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R2-D2">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:58Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#R4-P17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R4-P17">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:13Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#R5-D4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R5-D4">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:27Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ratts_Tyerel -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ratts_Tyerel">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:26Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Raymus_Antilles -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Raymus_Antilles">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:09Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Return_of_the_Jedi -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Return_of_the_Jedi">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:26Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Revenge_of_the_Sith -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Revenge_of_the_Sith">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:10Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Rey -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rey">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:34:09Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ric_Olie -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ric_Olie">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:06Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Rodia -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rodia">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Jungle planet that is home to the Rodian species. Its inhabitants live in domed cities.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Rodian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rodian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:40:29Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Roos_Tarpals -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Roos_Tarpals">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:16Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Rugor_Nass -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rugor_Nass">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:29Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Ryloth -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ryloth">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Ryloth is the principal planet in the Ryloth system located in the Outer Rim near Tatooine. It is home to the Twi&apos;leks, a humanoid species with two large, fleshy head-tails growing from their skulls. The Twi&apos;leks call these prehensile appendages lekku and can communicate through subtle lekku gestures, although they also speak Twi&apos;leki. During the Clone Wars, scheming Separatist warlords blockaded and invaded Ryloth, hoping to steal its riches. But after the war, dreams of a free Ryloth evaporated under the iron fist of Imperial occupation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Saesee_Tiin -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Saesee_Tiin">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:18Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#San_Hill -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#San_Hill">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:30Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Scimitar -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Scimitar">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:57:22Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Sebulba -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sebulba">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:41Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Serenno -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Serenno">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Located deep within the borders of Separatist space was Serenno, Count Dooku&apos;s home planet and site of his ancestral lands. When Dooku turned his back on the Jedi Order, he reclaimed his title, wealth and territory, moving his base of operations to a cliff-side palace with a commanding view of the lush forests of his homeworld. Heavily cordoned by Separatist warships, Serenno was kept insulated from the worst of the Clone Wars battles, giving it a deceptively tranquil air.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Shaak_Ti -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Shaak_Ti">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:52Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Shili -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Shili">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Shili is a fictional planet in the Star Wars universe. It is the homeworld of the Togruta species, a humanoid species known for their colorful skin patterns, montrals (head-tails), and head-tails, known as lekku.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Shmi_Skywalker -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Shmi_Skywalker">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:17Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Sith_speeder -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sith_speeder">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:52:12Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Skako -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Skako">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Skako is a fictional planet in the Star Wars universe, known for being the homeworld of the Skakoan species. Skako is located in the Core Worlds, a region of the galaxy that includes some of the most influential and well-developed planets.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Skakoan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Skakoan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:05Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Slave_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Slave_1">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:53Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Sly_Moore -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sly_Moore">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:08Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Snowspeeder -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Snowspeeder">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:18Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Socorro -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Socorro">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Socorro is a fictional planet in the Star Wars universe. It is located in the Outer Rim Territories, a vast and often lawless region of the galaxy. Socorro is known for its rugged and arid terrain, as well as its association with smuggling and the criminal underworld.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Star_Wars -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Star_Wars">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:50Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Stewjon -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Stewjon">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Stewjon is a fictional planet in the Star Wars universe. It is a relatively obscure and lesser-known location in Star Wars lore, and it has not been prominently featured in the main Star Wars films or major canonical media. 
+
+The primary significance of Stewjon lies in its association with the birthplace of Jedi Master Obi-Wan Kenobi, as mentioned in the &quot;Star Wars: The Essential Atlas&quot; reference book. However, it&apos;s important to note that the mention of Stewjon and its connection to Obi-Wan Kenobi&apos;s birthplace is part of the Expanded Universe (now referred to as &quot;Legends&quot;).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Sullust -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sullust">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Sullust is a fictional planet in the Star Wars universe, known for its volcanic landscapes and association with the Sullustan species. Sullust is located in the Outer Rim Territories and has appeared in various Star Wars media.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Sullustan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sullustan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:17Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#TIE_Advanced_x1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#TIE_Advanced_x1">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:54:48Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tarfful -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tarfful">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:53:22Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tatooine -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tatooine">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Tatooine is harsh desert world orbiting twin suns in the galaxy’s Outer Rim. In the days of the Empire and the Republic, many settlers scratched out a living on moisture farms, while spaceport cities such as Mos Eisley and Mos Espa served as home base for smugglers, criminals, and other rogues. Anakin Skywalker and Luke Skywalker both once called Tatooine home, although across the stars it was more widely known as a hive of scum and villainy ruled by the crime boss Jabba the Hutt.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Taun_We -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Taun_We">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:43:39Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#The_Empire_Strikes_Back -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Empire_Strikes_Back">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:39Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#The_Force_Awakens -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Force_Awakens">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:03Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#The_Last_Jedi -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Last_Jedi">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:13Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#The_Phantom_Menace -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Phantom_Menace">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:08:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#The_Rise_of_Skywalker -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Rise_of_Skywalker">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:24Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tholothian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tholothian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:28Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tion_Medon -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tion_Medon">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:27Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Togruta -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Togruta">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:44Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Toong -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Toong">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:17Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Toydaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Toydaria">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Toydaria is a world of fog, swamp, and forest. It played a key stragic role in the Clone Wars, as the planet&apos;s king, Katuunko, chose to stay neutral in the ongoing conflict. After a visit from Jar Jar Binks and Bail Organa, however, the king swore allegiance to the Republic, and allowed Toydaria to be used as a halfway point for supply delivery to clones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Toydarian -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Toydarian">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:29Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Trade_Federation_cruiser -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Trade_Federation_cruiser">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:54Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Trandosha -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Trandosha">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Trandosha is a fictional planet in the Star Wars universe. It is the homeworld of the Trandoshan species, a reptilian humanoid species known for their strength, hunting skills, and predatory nature. Trandosha is located in the Mid Rim of the galaxy.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Trandoshan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Trandoshan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:42Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tribubble_bongo -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tribubble_bongo">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:08Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Troiken -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Troiken">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Troiken is a fictional planet in the Star Wars universe. Troiken is associated with the Mon Calamari species and their homeworld, Mon Cala (also known as Mon Calamari). Mon Calamari and Quarren are two distinct aquatic species that inhabit the planet, and their cooperation has played a role in various events in the Star Wars saga.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tsmeu-6_personal_wheel_bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tsmeu-6_personal_wheel_bike">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:57Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Tund -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tund">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Tund is a fictional planet in the Star Wars universe. It is part of the Expanded Universe, also known as &quot;Legends,&quot; which includes material produced outside of the original films and television series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Umbara -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Umbara">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Umbara, known as the &quot;Shadow World&quot; due to the rays of its sun never completely reaching its surface, is perpetually dark. The native wildlife have adapted to survive in such gloom, making the planet perpetually dangerous. Umbara was once part of the Galactic Republic, represented in the Senate by Senator Mee Deechi. Later in the Clone Wars, the planet&apos;s loyalty wavered and the natives of Umbara allied themselves with the Separatists, bringing their extremely advanced technology to the Separatist Alliance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Umbaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Umbaran">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:35Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Utapau -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Utapau">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Ringed by numerous moons, the remote sanctuary of Utapau is a planet pitted with enormous sinkholes. Its windswept surface is dry and desert-like, but deep in the porous crust, at the bottom of the sinkholes are pools of life-giving water. Many of the sinkholes on one of the planet&apos;s small continents are lined with intricate cities that stretch deep into caves and crevices beneath the planet&apos;s surface, as well as mining operations that seek to uncover valuable minerals from the planet&apos;s depths.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Vulpter -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Vulpter">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Vulpter is a fictional planet in the Star Wars universe. It is associated with the Vulptereen species, known for their podracing skills. Vulpter is located in the Mid Rim of the galaxy.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Vulptereen -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Vulptereen">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:47Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Wat_Tambor -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wat_Tambor">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:37Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Watto -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Watto">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">137</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:52Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Wedge_Antilles -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wedge_Antilles">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:21Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Wicket_Systri_Warrick -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wicket_Systri_Warrick">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:02Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Wilhuff_Tarkin -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wilhuff_Tarkin">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auburn</hasHairColor>
+        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grey</hasHairColor>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:53Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Wookiee -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wookiee">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:57Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#X-wing -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#X-wing">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:54:32Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#XJ-6_airspeeder -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#XJ-6_airspeeder">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:53:30Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Xexto -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Xexto">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:07Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Yarael_Poof -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yarael_Poof">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">264</hasHeight>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:12Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Yoda -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yoda">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:24Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Zabrak -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zabrak">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:31Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Zam_Wesell -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zam_Wesell">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168</hasHeight>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasMass>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:34Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Zephyr-G_swoop_bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zephyr-G_swoop_bike">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:53:14Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Zolan -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zolan">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:comment>Zolan is a fictional planet in the Star Wars universe. It is associated with the Clawdite species, a shapeshifting humanoid species known for their ability to change their physical appearance.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Pau&apos;an -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Pau&apos;an">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:39Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Twi&apos;lek -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Twi&apos;lek">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:06Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Yoda&apos;s_species -->
+
+    <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yoda&apos;s_species">
+        <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:19Z</dc:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Movie"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
+            <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
