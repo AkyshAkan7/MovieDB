@@ -38,3 +38,19 @@ WHERE {
 }
 GROUP BY ?CharacterName 
 
+-----------------------------------------------Query_3-------------------------------------
+Query3: Starships with the descending number of Passenger numbers and representing the crew number for each starship
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+
+SELECT ?StarshipName ?PassengersNumber ?CrewNumber
+WHERE {
+    
+   ?Starship a ns1:Starship ;
+              ns1:name ?StarshipName ;
+              ns1:passengers ?PassengersNumber;
+              ns1:crew ?CrewNumber
+}
+GROUP BY ?StarshipName ?PassengersNumber ?CrewNumber
+ORDER BY DESC (?PassengersNumber) 
