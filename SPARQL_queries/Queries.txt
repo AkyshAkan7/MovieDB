@@ -137,14 +137,96 @@ WHERE {
 GROUP BY ?Classification
 
 -----------------------------------------------Query_8-------------------------------------
-Query8: Gives the Films which release year is after 2000
+Query8: Presenting characters and sum of prices of vehicles and starships and grouping them by richest, poorest and in-between
 
 PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?filmTitle ?releaseYear
+SELECT ?characterName ?totalCost ?wealthStatus
 WHERE {
-    ?film ns1:releaseYear ?releaseYear.
-    ?film ns1:title ?filmTitle.
-    FILTER (?releaseYear > 2000)
+    # Subquery to calculate total cost per character
+    {
+        SELECT ?character ?characterName (SUM(?cost) AS ?totalCost)
+        WHERE {
+            # Selecting characters and their starships/vehicles
+            {
+                ?character a ns1:Character ;
+                           ns1:name ?characterName ;
+                           ns1:hasStarship ?starship .
+                ?starship a ns1:Starship ;
+                          ns1:costInCredits ?cost .
+            } UNION {
+                ?character a ns1:Character ;
+                           ns1:name ?characterName ;
+                           ns1:hasVehicle ?vehicle .
+                ?vehicle a ns1:Vehicle ;
+                         ns1:costInCredits ?cost .
+            }
+        }
+        GROUP BY ?character ?characterName
+    }
+
+    # Subquery to get max and min total costs
+    {
+        SELECT (MAX(?totalCost) AS ?maxCost) (MIN(?totalCost) AS ?minCost)
+        WHERE {
+            SELECT (SUM(?cost) AS ?totalCost)
+            WHERE {
+                {
+                    ?character a ns1:Character ;
+                               ns1:hasStarship ?starship .
+                    ?starship a ns1:Starship ;
+                              ns1:costInCredits ?cost .
+                } UNION {
+                    ?character a ns1:Character ;
+                               ns1:hasVehicle ?vehicle .
+                    ?vehicle a ns1:Vehicle ;
+                             ns1:costInCredits ?cost .
+                }
+            }
+            GROUP BY ?character
+        }
+    }
+
+    # Binding wealth status
+    BIND(IF(?totalCost = ?maxCost, "Richest",
+        IF(?totalCost = ?minCost, "Poorest", "In-between")) AS ?wealthStatus)
+}
+ORDER BY DESC (?totalCost)
+
+-----------------------------------------------Query_9-------------------------------------
+
+Query9: Presents planet population and calculated density
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?planetName ?population  (IF(?diameter > 0, ?population / (4 * 3.14159 * ((?diameter / 2) * (?diameter / 2))), "N/A") AS ?density)
+WHERE {
+    
+    ?planet a ns1:Planet ;
+            ns1:name ?planetName ;
+            ns1:population ?population ;
+            ns1:diameter ?diameter .
+    
+}
+ORDER BY DESC(?density)
+OFFSET 4
+
+-----------------------------------------------Query_10-------------------------------------
+
+Query10: Gives the answer on particular character is related to the particular specie or not.
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK WHERE 
+{
+  ?character a ns1:Character ;
+             ns1:name "Chewbacca"^^xsd:string ;
+             ns1:type ?species .
+  ?species	 rdfs:label ?SpecieName
+
+  FILTER (?SpecieName = "Wookiee")
 }
