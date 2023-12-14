@@ -198,11 +198,220 @@ Mukhtar Abenov</rdfs:isDefinedBy>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasBirthYear -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#Mglt -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasBirthYear">
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mglt">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#averageHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#averageHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#averageLifespan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#averageLifespan">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#birthYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#birthYear">
         <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#cargoCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#cargoCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#class -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#class">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#classification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#classification">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#climate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#climate">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#consumables -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#consumables">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#costInCredits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#costInCredits">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#crew -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#crew">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#designation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#designation">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#diameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#diameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#eyeColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#eyeColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#gravity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#gravity">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hairColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hairColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -220,52 +429,111 @@ Mukhtar Abenov</rdfs:isDefinedBy>
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T14:49:47Z</dc:date>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasEyeColor -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasEyeColor">
-        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasGender -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasGender">
-        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasHairColor -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasHairColor">
-        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasHeight -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#height -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasHeight">
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#height">
         <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasMass -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hyperdriveRating -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasMass">
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hyperdriveRating">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#language">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasSpecieDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#length">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#mass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#mass">
         <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -278,19 +546,148 @@ Mukhtar Abenov</rdfs:isDefinedBy>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSex -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#maxAtmospheringSpeed -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSex">
-        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#maxAtmospheringSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#model">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.dei.unipd.it/database2/IMDbOntology#hasSkinColor -->
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#name -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#hasSkinColor">
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#orbitalPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#orbitalPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#passangers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#passangers">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasTransportDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#population -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#population">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#rotationPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#rotationPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#sex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#sex">
         <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasCharacterDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#skinColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#skinColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
+                    <rdf:Description rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#surfaceWater -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#surfaceWater">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/IMDbOntology#terrain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#terrain">
+        <rdfs:subPropertyOf rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#hasPlanetDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsPlanet"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -491,7 +888,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#AT-ST">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -501,9 +898,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ackbar">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:49:59Z</dc:date>
     </owl:NamedIndividual>
     
@@ -513,9 +910,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Adi_Gallia">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">184</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">184</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:50:14Z</dc:date>
     </owl:NamedIndividual>
     
@@ -543,7 +940,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Aleena">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:29Z</dc:date>
     </owl:NamedIndividual>
     
@@ -553,9 +950,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Anakin_Skywalker">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:37:01Z</dc:date>
     </owl:NamedIndividual>
     
@@ -565,7 +962,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Arvel_Crynyd">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:38Z</dc:date>
     </owl:NamedIndividual>
     
@@ -575,7 +972,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Attack_of_the_Clones">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:08:57Z</dc:date>
     </owl:NamedIndividual>
     
@@ -585,9 +982,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ayla_Secura">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:45:22Z</dc:date>
     </owl:NamedIndividual>
     
@@ -597,7 +994,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#BB8">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:42Z</dc:date>
     </owl:NamedIndividual>
     
@@ -607,8 +1004,8 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bail_Prestor_Organa">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:27Z</dc:date>
     </owl:NamedIndividual>
     
@@ -618,9 +1015,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Barriss_Offee">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">166</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">166</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:44:08Z</dc:date>
     </owl:NamedIndividual>
     
@@ -630,7 +1027,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Belbullab-22_starfighter">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:34Z</dc:date>
     </owl:NamedIndividual>
     
@@ -640,9 +1037,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ben_Quadinaros">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:52:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -652,9 +1049,9 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Beru_Whitesun_Lars">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:41Z</dc:date>
     </owl:NamedIndividual>
     
@@ -664,7 +1061,7 @@ Mukhtar Abenov</rdfs:isDefinedBy>
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Besalisk">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:42Z</dc:date>
     </owl:NamedIndividual>
     
@@ -694,8 +1091,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bib_Fortuna">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:45:09Z</dc:date>
     </owl:NamedIndividual>
     
@@ -705,9 +1102,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Biggs_Darklighter">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:26:25Z</dc:date>
     </owl:NamedIndividual>
     
@@ -717,9 +1114,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Boba_Fett">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.2</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.2</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:23Z</dc:date>
     </owl:NamedIndividual>
     
@@ -729,9 +1126,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Bossk">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:52:47Z</dc:date>
     </owl:NamedIndividual>
     
@@ -741,9 +1138,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#C-3PO">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:44Z</dc:date>
     </owl:NamedIndividual>
     
@@ -753,7 +1150,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Captain_Phasma">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:34:19Z</dc:date>
     </owl:NamedIndividual>
     
@@ -781,7 +1178,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cerean">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:31:57Z</dc:date>
     </owl:NamedIndividual>
     
@@ -791,7 +1188,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Chagrian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:32:10Z</dc:date>
     </owl:NamedIndividual>
     
@@ -819,9 +1216,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Chewbacca">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:53:08Z</dc:date>
     </owl:NamedIndividual>
     
@@ -831,8 +1228,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cliegg_Lars">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:30Z</dc:date>
     </owl:NamedIndividual>
     
@@ -851,8 +1248,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Cordé">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">157</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">157</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:54:49Z</dc:date>
     </owl:NamedIndividual>
     
@@ -880,9 +1277,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Darth_Maul">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T14:28:00Z</dc:date>
     </owl:NamedIndividual>
     
@@ -892,9 +1289,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Darth_Vader">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -913,9 +1310,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dexter_Jettster">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:54:59Z</dc:date>
     </owl:NamedIndividual>
     
@@ -925,9 +1322,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dooku">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:18Z</dc:date>
     </owl:NamedIndividual>
     
@@ -946,8 +1343,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dormé">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:31:39Z</dc:date>
     </owl:NamedIndividual>
     
@@ -957,7 +1354,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Droid">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:32:41Z</dc:date>
     </owl:NamedIndividual>
     
@@ -967,9 +1364,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dud_Bolt">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:12Z</dc:date>
     </owl:NamedIndividual>
     
@@ -979,7 +1376,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Dug">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:33:27Z</dc:date>
     </owl:NamedIndividual>
     
@@ -989,8 +1386,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Eeth_Koth">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T14:28:15Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1018,7 +1415,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ewok">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:33:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1028,8 +1425,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Finis_Valorum">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:37Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1039,7 +1436,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Finn">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:58Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1049,7 +1446,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Flitknot_speeder">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:40Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1059,8 +1456,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Gasgano">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:24Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1070,7 +1467,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Geonosian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:35:53Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1098,9 +1495,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Greedo">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:37Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1110,9 +1507,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Gregar_Typho">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:47Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1122,9 +1519,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Grievous">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:55:59Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1142,7 +1539,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#H-type_Nubian_yacht">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:58:02Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1152,9 +1549,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Han_Solo">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:06Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1173,7 +1570,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Human">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:30:43Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1183,7 +1580,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Hutt">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:35:13Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1193,9 +1590,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#IG-88">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:27Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1214,7 +1611,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Iktotchi">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:36:36Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1224,7 +1621,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Imperial_Speeder_Bike">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:52Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1234,7 +1631,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Imperial_shuttle">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:22Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1253,9 +1650,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jabba_Desilijic_Tiure">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1358</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1358</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:56:09Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1265,9 +1662,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jango_Fett">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:31:55Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1277,9 +1674,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jar_Jar_Binks">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:41Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1289,7 +1686,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jedi_Interceptor">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:22Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1299,7 +1696,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jedi_starfighter">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:38Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1309,9 +1706,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jek_Tono_Porkins">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:57:40Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1321,8 +1718,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Jocasta_Nu">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:07Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1341,7 +1738,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kaleesh">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:36:47Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1360,7 +1757,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kaminoan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:07Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1379,7 +1776,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kel_Dor">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:20Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1389,9 +1786,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ki-Adi-Mundi">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:57:51Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1401,9 +1798,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Kit_Fisto">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:00Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1413,7 +1810,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Koro-2_Exodrive_airspeeder">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:25Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1423,9 +1820,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lama_Su">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">229</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">229</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:43:26Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1435,9 +1832,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lando_Calrissian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:12Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1447,9 +1844,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Leia_Organa">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:55Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1459,9 +1856,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Lobot">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">175</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:02Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1471,9 +1868,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Luke_Skywalker">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">172</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">172</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:45Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1483,9 +1880,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Luminara_Unduli">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56.2</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56.2</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:44:20Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1495,9 +1892,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mace_Windu">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:37:12Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1516,8 +1913,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mas_Amedda">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:31Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1527,7 +1924,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Millennium_Falcon">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:08Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1546,7 +1943,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mirialan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:37:58Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1565,7 +1962,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mon_Calamari">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:34Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1575,9 +1972,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Mon_Mothma">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auburn</hasHairColor>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <hairColor>auburn</hairColor>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:32:50Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1587,7 +1984,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Muun">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:44Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1624,7 +2021,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo_fighter">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:57:44Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1634,7 +2031,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Naboo_star_skiff">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:09Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1653,7 +2050,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nautolan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:38:54Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1663,7 +2060,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Neimodian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:26Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1673,9 +2070,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nien_Nunb">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:43Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1685,9 +2082,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Nute_Gunray">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:58:54Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1697,9 +2094,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Obi-Wan_Kenobi">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:29:15Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1718,9 +2115,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Owen_Lars">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:10Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1730,9 +2127,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Padmé_Amidala">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">185</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:50Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1742,9 +2139,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Palpatine">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1754,9 +2151,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Plo_Koon">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:05Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1766,7 +2163,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Poe_Dameron">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:33:48Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1776,9 +2173,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Poggle_the_Lesser">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:15Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1788,8 +2185,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Quarsh_Panaka">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:04Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1808,7 +2205,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Quermian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:59Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1818,9 +2215,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Qui-Gon_Jinn">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:20Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1830,9 +2227,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R2-D2">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:58Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1842,8 +2239,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R4-P17">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:41:13Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1853,9 +2250,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#R5-D4">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:40:27Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1865,9 +2262,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ratts_Tyerel">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T12:59:26Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1877,9 +2274,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Raymus_Antilles">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:09Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1889,7 +2286,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Return_of_the_Jedi">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:26Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1899,7 +2296,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Revenge_of_the_Sith">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:10Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1909,7 +2306,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rey">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:34:09Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1919,8 +2316,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Ric_Olie">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">183</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:35:06Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1939,7 +2336,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rodian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:40:29Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1949,9 +2346,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Roos_Tarpals">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:16Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1961,8 +2358,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Rugor_Nass">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:42:29Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1981,8 +2378,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Saesee_Tiin">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:18Z</dc:date>
     </owl:NamedIndividual>
     
@@ -1992,8 +2389,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#San_Hill">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:30Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2003,7 +2400,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Scimitar">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:57:22Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2013,9 +2410,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sebulba">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:41Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2034,9 +2431,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Shaak_Ti">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:00:52Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2055,8 +2452,8 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Shmi_Skywalker">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:36:17Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2066,7 +2463,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sith_speeder">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:52:12Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2085,7 +2482,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Skakoan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:05Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2095,7 +2492,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Slave_1">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:56:53Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2105,9 +2502,9 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sly_Moore">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:08Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2117,7 +2514,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Snowspeeder">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:50:18Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2136,7 +2533,7 @@ One of the notable features of Bestine IV is the presence of a city known as Bes
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Star_Wars">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:50Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2166,7 +2563,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Sullustan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:17Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2176,7 +2573,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#TIE_Advanced_x1">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:54:48Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2186,9 +2583,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tarfful">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">136</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:53:22Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2207,8 +2604,8 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Taun_We">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:43:39Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2218,7 +2615,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Empire_Strikes_Back">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#OriginalTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:09:39Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2228,7 +2625,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Force_Awakens">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:03Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2238,7 +2635,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Last_Jedi">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:13Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2248,7 +2645,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Phantom_Menace">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#PrequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:08:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2258,7 +2655,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#The_Rise_of_Skywalker">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#SequelTrilogy"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T14:10:24Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2268,7 +2665,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tholothian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:28Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2278,9 +2675,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tion_Medon">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:27Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2290,7 +2687,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Togruta">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:41:44Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2300,7 +2697,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Toong">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:17Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2319,7 +2716,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Toydarian">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:29Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2329,7 +2726,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Trade_Federation_cruiser">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:55:54Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2348,7 +2745,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Trandoshan">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:42:42Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2358,7 +2755,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tribubble_bongo">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:08Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2377,7 +2774,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Tsmeu-6_personal_wheel_bike">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:51:57Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2405,7 +2802,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Umbaran">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:35Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2433,7 +2830,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Vulptereen">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:47Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2443,9 +2840,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wat_Tambor">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:37Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2455,8 +2852,8 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Watto">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">137</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">137</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:01:52Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2466,9 +2863,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wedge_Antilles">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:28:21Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2478,9 +2875,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wicket_Systri_Warrick">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:02Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2490,10 +2887,10 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wilhuff_Tarkin">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auburn</hasHairColor>
-        <hasHairColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grey</hasHairColor>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <hairColor>auburn</hairColor>
+        <hairColor>grey</hairColor>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T13:27:53Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2503,7 +2900,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Wookiee">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:57Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2513,7 +2910,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#X-wing">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsStarship"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:54:32Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2523,7 +2920,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#XJ-6_airspeeder">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:53:30Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2533,7 +2930,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Xexto">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:07Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2543,8 +2940,8 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yarael_Poof">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">264</hasHeight>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">264</height>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:12Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2554,9 +2951,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yoda">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:24Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2566,7 +2963,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zabrak">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:31Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2576,9 +2973,9 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zam_Wesell">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsCharacter"/>
-        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168</hasHeight>
-        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</hasMass>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168</height>
+        <mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</mass>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-13T13:02:34Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2588,7 +2985,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Zephyr-G_swoop_bike">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsVehicle"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-11T19:53:14Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2607,7 +3004,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Pau&apos;an">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:39:39Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2617,7 +3014,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Twi&apos;lek">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:43:06Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2627,7 +3024,7 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
     <owl:NamedIndividual rdf:about="http://www.dei.unipd.it/database2/IMDbOntology#Yoda&apos;s_species">
         <rdf:type rdf:resource="http://www.dei.unipd.it/database2/IMDbOntology#StarWarsSpecies"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliia</dc:creator>
+        <dc:creator>Aliia</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T15:44:19Z</dc:date>
     </owl:NamedIndividual>
     
@@ -2665,5 +3062,5 @@ The primary significance of Stewjon lies in its association with the birthplace 
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
