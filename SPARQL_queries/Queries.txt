@@ -39,6 +39,7 @@ WHERE {
 GROUP BY ?CharacterName 
 
 -----------------------------------------------Query_3-------------------------------------
+
 Query3: Starships with the descending number of Passenger numbers and representing the crew number for each starship
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -54,3 +55,20 @@ WHERE {
 }
 GROUP BY ?StarshipName ?PassengersNumber ?CrewNumber
 ORDER BY DESC (?PassengersNumber) 
+
+-----------------------------------------------Query_4-------------------------------------
+
+Query4:Representing the character who which hair color has and shouwing how many characters has that color, imlied only to those characters who has one hair color.
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+
+SELECT ?HairColor (COUNT(?Character) AS ?CharacterCount) 
+                  (GROUP_CONCAT(DISTINCT ?CharacterName; separator=', ') AS ?Characters)
+WHERE {
+   ?Character a ns1:Character ;
+              ns1:name ?CharacterName ;
+              ns1:hairColor ?HairColor .
+   FILTER (?HairColor != 'none')
+}
+GROUP BY ?HairColor
