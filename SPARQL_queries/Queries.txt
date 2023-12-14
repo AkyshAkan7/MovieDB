@@ -1,13 +1,40 @@
-Query1_Ordering_Planet_Diameter
+Query1: Ordering Planet Diameter
 
-prefix ns1: <http://www.dei.unipd.it/database2/IMDbOntology/> 
-prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-select distinct?PlanetName ?Diameter
-where { 
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+ 
+SELECT distinct?PlanetName ?Diameter
+WHERE { 
     ?s a ns1:Planet ;
        ns1:name ?PlanetName ;
        ns1:diameter ?Diameter
 } 
-order by desc (?Diameter)
-limit 50
+ORDER BY DESC (?Diameter)
+LIMIT 50
+
+-----------------------------------------------Query_2-------------------------------------
+
+Query2: Characters who has either vehicle or starship
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?CharacterName 
+       (GROUP_CONCAT(DISTINCT ?VehicleName; separator=', ') AS ?Vehicles)
+       (GROUP_CONCAT(DISTINCT ?StarshipName; separator=', ') AS ?Starships)
+WHERE {
+   ?Character a ns1:Character ;
+              ns1:name ?CharacterName .
+   
+   {
+      ?Character ns1:hasVehicle ?Vehicle .
+      ?Vehicle ns1:name ?VehicleName .
+   }
+   UNION
+   {
+      ?Character ns1:hasStarship ?Starship .
+      ?Starship ns1:name ?StarshipName .
+   }
+}
+GROUP BY ?CharacterName 
 
