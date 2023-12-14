@@ -89,3 +89,30 @@ WHERE {
    OPTIONAL { ?Character ns1:mass ?Mass }
 }
 GROUP BY ?Gender
+
+-----------------------------------------------Query_6-------------------------------------
+
+Query6: Presenting some types of existing Terrain and how many planets have them and also the list of those planets given as well
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?Terrain
+  (COUNT(DISTINCT ?Planet) AS ?PlanetCount)
+  (GROUP_CONCAT(DISTINCT ?PlanetName; separator=', ') AS ?Planets)
+WHERE {
+   ?Planet a ns1:Planet ;
+           ns1:terrain ?Terrain ;
+           ns1:name ?PlanetName .
+  
+   BIND(CONTAINS(STR(?Terrain), "mountains") AS ?HasMountains)
+   BIND(CONTAINS(STR(?Terrain), "forests") AS ?HasForests)
+   BIND(CONTAINS(STR(?Terrain), "jungle") AS ?HasJungle)
+   BIND(CONTAINS(STR(?Terrain), "lakes") AS ?HasLakes)
+   BIND(CONTAINS(STR(?Terrain), "rivers") AS ?HasRivers)
+  
+   FILTER (?HasMountains || ?HasForests || ?HasJungle || ?HasLakes || ?HasRivers)
+}
+GROUP BY ?Terrain
+ORDER BY DESC (?PlanetCount)
