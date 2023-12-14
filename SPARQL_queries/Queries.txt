@@ -135,3 +135,16 @@ WHERE {
             ns1:name ?SpeciesName .
 }
 GROUP BY ?Classification
+
+-----------------------------------------------Query_8-------------------------------------
+Query8: Gives the Films which release year is after 2000
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?filmTitle ?releaseYear
+WHERE {
+    ?film ns1:releaseYear ?releaseYear.
+    ?film ns1:title ?filmTitle.
+    FILTER (?releaseYear > 2000)
+}
