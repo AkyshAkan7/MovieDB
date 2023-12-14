@@ -116,3 +116,22 @@ WHERE {
 }
 GROUP BY ?Terrain
 ORDER BY DESC (?PlanetCount)
+
+-----------------------------------------------Query_7-------------------------------------
+
+Query7: Representing the classification type of Scpecies, counting the species with the same type, giving their list of species and the languages they are talking in.
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Classification
+       (GROUP_CONCAT(DISTINCT ?Language; separator=', ') AS ?Languages)
+       (COUNT(DISTINCT ?Species) AS ?SpeciesCount)
+       (GROUP_CONCAT(DISTINCT ?SpeciesName; separator=', ') AS ?SpeciesList)
+WHERE {
+   ?Species a ns1:Specie ;
+            ns1:classification ?Classification ;
+            ns1:language ?Language ;
+            ns1:name ?SpeciesName .
+}
+GROUP BY ?Classification
