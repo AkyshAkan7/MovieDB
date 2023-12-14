@@ -61,7 +61,7 @@ ORDER BY DESC (?PassengersNumber)
 Query4:Representing the character who which hair color has and shouwing how many characters has that color, imlied only to those characters who has one hair color.
 
 PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
-PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?HairColor (COUNT(?Character) AS ?CharacterCount) 
                   (GROUP_CONCAT(DISTINCT ?CharacterName; separator=', ') AS ?Characters)
@@ -72,3 +72,20 @@ WHERE {
    FILTER (?HairColor != 'none')
 }
 GROUP BY ?HairColor
+
+-----------------------------------------------Query_5-------------------------------------
+
+Query5: Showing each existing gender among characters and showing their amount and also the heaviest mass of the character in particular gender.
+
+PREFIX ns1: <http://www.dei.unipd.it/database2/IMDbOntology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Gender
+       (COUNT(?Character) AS ?CharacterCount)
+       (MAX(?Mass) AS ?HeaviestCharacterMass)
+WHERE {
+   ?Character a ns1:Character ;
+              ns1:gender ?Gender .
+   OPTIONAL { ?Character ns1:mass ?Mass }
+}
+GROUP BY ?Gender
