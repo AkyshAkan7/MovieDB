@@ -17,3 +17,6 @@ For this project, we have utilized a comprehensive Star Wars dataset sourced fro
 Additionally, we have incorporated data from the [GitHub repository](https://github.com/fgeorges/star-wars-dataset) maintained by contributors passionate about the Star Wars universe. This repository enhances the dataset's richness by including additional attributes, relationships, and potentially unique insights.
 
 By merging these datasets, our aim is to create a robust and interconnected graph representation of the Star Wars universe. This combined dataset forms the backbone of our project, allowing us to navigate the galaxy's intricacies and explore the relationships that define the epic narrative of Star Wars.
+
+## TODO (for future)
+ - add films csv and generate ttl file and link with other ttls
