@@ -1,0 +1,140 @@
+@prefix ns1: <http://www.dei.unipd.it/database2/IMDbOntology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Films
+ns1:ANewHope a ns1:Film ;
+  ns1:title "Star Wars: Episode IV - A New Hope" ;
+  ns1:releaseYear 1977 ;
+  ns1:directedBy ns1:GeorgeLucas ;
+  ns1:includesCharacter ns1:LukeSkywalker, ns1:PrincessLeia, ns1:HanSolo, ns1:ObiWanKenobi, ns1:DarthVader, ns1:Chewbacca, ns1:R2D2, ns1:C3PO, ns1:Ackbar, ns1:BiggsDarklighter, ns1:LeiaOrgana, ns1:WedgeAntilles, ns1:WilhuffTarkin, ns1:ArvelCrynyd, ns1:BailPrestorOrgana, ns1:BibFortuna, ns1:ClieggLars, ns1:DexterJettster, ns1:JabbaDesilijicTiure, ns1:JocastaNu, ns1:KiAdiMundi, ns1:LamaSu, ns1:Lobot, ns1:LuminaraUnduli, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:OwenLars, ns1:PloKoon, ns1:R4P17, ns1:R5D4, ns1:RaymusAntilles, ns1:RoosTarpals, ns1:RugorNass, ns1:SlyMoore, ns1:Tarfful, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WicketSystriWarrick, ns1:YaraelPoof .
+
+ns1:TheEmpireStrikesBack a ns1:Film ;
+  ns1:title "Star Wars: Episode V - The Empire Strikes Back" ;
+  ns1:releaseYear 1980 ;
+  ns1:directedBy ns1:IrvinKershner ;
+  ns1:includesCharacter ns1:LukeSkywalker, ns1:PrincessLeia, ns1:HanSolo, ns1:ObiWanKenobi, ns1:DarthVader, ns1:Chewbacca, ns1:R2D2, ns1:C3PO, ns1:LandoCalrissian, ns1:Lobot, ns1:Yoda, ns1:AdmiralAckbar, ns1:AnakinSkywalker, ns1:AylaSecura, ns1:BobaFett, ns1:C3PO, ns1:Chewbacca, ns1:DarthVader, ns1:Dengar, ns1:Dengar, ns1:DudBolt, ns1:Finn, ns1:Gasgano, ns1:GeneralVeers, ns1:Greedo, ns1:HothOfficer, ns1:IG88, ns1:JabbaDesilijicTiure, ns1:JangoFett, ns1:JocastaNu, ns1:KiAdiMundi, ns1:Lobot, ns1:Lobot, ns1:LuminaraUnduli, ns1:MaceWindu, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:ObiWanKenobi, ns1:PadmeAmidala, ns1:Palpatine, ns1:PloKoon, ns1:PoeDameron, ns1:PoggletheLesser, ns1:QuiGonJinn, ns1:R2D2, ns1:Rey, ns1:RicOlie, ns1:RoosTarpals, ns1:RugorNass, ns1:SaeseeTiin, ns1:SanHill, ns1:Sebulba, ns1:ShaakTi, ns1:ShmiSkywalker, ns1:SlyMoore, ns1:Tarfful, ns1:TaunWe, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WedgeAntilles, ns1:WicketSystriWarrick, ns1:WilhuffTarkin, ns1:YaraelPoof, ns1:Yoda, ns1:ZamWesell .
+
+
+ns1:ReturnOfTheJedi a ns1:Film ;
+  ns1:title "Star Wars: Episode VI - Return of the Jedi" ;
+  ns1:releaseYear 1983 ;
+  ns1:directedBy ns1:RichardMarquand ;
+  ns1:includesCharacter ns1:LukeSkywalker, ns1:PrincessLeia, ns1:HanSolo, ns1:ObiWanKenobi, ns1:DarthVader, ns1:Chewbacca, ns1:R2D2, ns1:C3PO, ns1:LandoCalrissian, ns1:Lobot, ns1:Yoda, ns1:AdmiralAckbar, ns1:AnakinSkywalker, ns1:AylaSecura, ns1:BobaFett, ns1:C3PO, ns1:Chewbacca, ns1:DarthVader, ns1:Dengar, ns1:EmperorPalpatine, ns1:GamorreanGuard, ns1:GeneralVeers, ns1:Greedo, ns1:HothOfficer, ns1:JabbaDesilijicTiure, ns1:JangoFett, ns1:JocastaNu, ns1:KiAdiMundi, ns1:LandoCalrissian, ns1:Lobot, ns1:Lobot, ns1:LuminaraUnduli, ns1:MaceWindu, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:ObiWanKenobi, ns1:PadmeAmidala, ns1:Palpatine, ns1:PloKoon, ns1:PoeDameron, ns1:PoggletheLesser, ns1:QuiGonJinn, ns1:R2D2, ns1:Rey, ns1:RicOlie, ns1:RoosTarpals, ns1:RugorNass, ns1:SaeseeTiin, ns1:SanHill, ns1:Sebulba, ns1:ShaakTi, ns1:ShmiSkywalker, ns1:SlyMoore, ns1:Tarfful, ns1:TaunWe, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WedgeAntilles, ns1:WicketSystriWarrick, ns1:WilhuffTarkin, ns1:YaraelPoof, ns1:Yoda, ns1:ZamWesell .
+
+
+ns1:ThePhantomMenace a ns1:Film ;
+  ns1:title "Star Wars: Episode I - The Phantom Menace" ;
+  ns1:releaseYear 1999 ;
+  ns1:directedBy ns1:GeorgeLucas ;
+  ns1:includesCharacter ns1:Ackbar, ns1:AdiGallia, ns1:AnakinSkywalker, ns1:ArvelCrynyd, ns1:AylaSecura, ns1:BailPrestorOrgana, ns1:C3PO, ns1:Chewbacca, ns1:DarthMaul, ns1:DarthVader, ns1:DexterJettster, ns1:Dooku, ns1:Dorme, ns1:DudBolt, ns1:EethKoth, ns1:FinisValorum, ns1:Finn, ns1:Gasgano, ns1:Greedo, ns1:GregarTypho, ns1:Grievous, ns1:HanSolo, ns1:IG88, ns1:JabbaDesilijicTiure, ns1:JangoFett, ns1:JarJarBinks, ns1:JocastaNu, ns1:KiAdiMundi, ns1:KitFisto, ns1:LamaSu, ns1:LandoCalrissian, ns1:LeiaOrgana, ns1:Lobot, ns1:LukeSkywalker, ns1:LuminaraUnduli, ns1:MaceWindu, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:NuteGunray, ns1:ObiWanKenobi, ns1:OwenLars, ns1:PadmeAmidala, ns1:Palpatine, ns1:PloKoon, ns1:PoeDameron, ns1:PoggletheLesser, ns1:QuarshPanaka, ns1:QuiGonJinn, ns1:R2D2, ns1:R4P17, ns1:R5D4, ns1:RattsTyerel, ns1:RaymusAntilles, ns1:Rey, ns1:RicOlie, ns1:RoosTarpals, ns1:RugorNass, ns1:SaeseeTiin, ns1:SanHill, ns1:Sebulba, ns1:ShaakTi, ns1:ShmiSkywalker, ns1:SlyMoore, ns1:Tarfful, ns1:TaunWe, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WedgeAntilles, ns1:WicketSystriWarrick, ns1:WilhuffTarkin, ns1:YaraelPoof, ns1:Yoda, ns1:ZamWesell .
+
+
+ns1:AttackOfTheClones a ns1:Film ;
+  ns1:title "Star Wars: Episode II - Attack of the Clones" ;
+  ns1:releaseYear 2002 ;
+  ns1:directedBy ns1:GeorgeLucas ;
+  ns1:includesCharacter ns1:AnakinSkywalker, ns1:PadmeAmidala, ns1:ObiWanKenobi, ns1:MaceWindu, ns1:Yoda, ns1:Dooku, ns1:CountDooku, ns1:JangoFett, ns1:BobaFett, ns1:ZamWesell, ns1:Palpatine, ns1:C3PO, ns1:R2D2, ns1:SioBibble, ns1:BailPrestorOrgana, ns1:CaptainTypho, ns1:JarJarBinks, ns1:BarrissOffee, ns1:BB8, ns1:BenQuadinaros, ns1:BeruWhitesunLars, ns1:BiggsDarklighter, ns1:BobaFett, ns1:Bossk, ns1:C3PO, ns1:Chewbacca, ns1:ClieggLars, ns1:Corde, ns1:DarthMaul, ns1:DarthVader, ns1:DexterJettster, ns1:Dooku, ns1:Dorme, ns1:DudBolt, ns1:EethKoth, ns1:FinisValorum, ns1:Finn, ns1:Gasgano, ns1:Greedo, ns1:GregarTypho, ns1:Grievous, ns1:HanSolo, ns1:IG88, ns1:JabbaDesilijicTiure, ns1:JangoFett, ns1:JarJarBinks, ns1:JekTonoPorkins, ns1:JocastaNu, ns1:KiAdiMundi, ns1:KitFisto, ns1:LamaSu, ns1:LandoCalrissian, ns1:LeiaOrgana, ns1:Lobot, ns1:LukeSkywalker, ns1:LuminaraUnduli, ns1:MaceWindu, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:NuteGunray, ns1:ObiWanKenobi, ns1:OwenLars, ns1:PadmeAmidala, ns1:Palpatine, ns1:PloKoon, ns1:PoeDameron, ns1:PoggletheLesser, ns1:QuarshPanaka, ns1:QuiGonJinn, ns1:R2D2, ns1:R4P17, ns1:R5D4, ns1:RattsTyerel, ns1:RaymusAntilles, ns1:Rey, ns1:RicOlie, ns1:RoosTarpals, ns1:RugorNass, ns1:SaeseeTiin, ns1:SanHill, ns1:Sebulba, ns1:ShaakTi, ns1:ShmiSkywalker, ns1:SlyMoore, ns1:Tarfful, ns1:TaunWe, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WedgeAntilles, ns1:WicketSystriWarrick, ns1:WilhuffTarkin, ns1:YaraelPoof, ns1:Yoda, ns1:ZamWesell .
+
+ns1:RevengeOfTheSith a ns1:Film ;
+  ns1:title "Star Wars: Episode III - Revenge of the Sith" ;
+  ns1:releaseYear 2005 ;
+  ns1:directedBy ns1:GeorgeLucas ;
+  ns1:includesCharacter ns1:Ackbar, ns1:AdiGallia, ns1:AnakinSkywalker, ns1:ArvelCrynyd, ns1:AylaSecura, ns1:BailPrestorOrgana, ns1:BarrissOffee, ns1:BB8, ns1:BenQuadinaros, ns1:BeruWhitesunLars, ns1:BibFortuna, ns1:BiggsDarklighter, ns1:BobaFett, ns1:Bossk, ns1:C3PO, ns1:CaptainPhasma, ns1:Chewbacca, ns1:ClieggLars, ns1:Corde, ns1:DarthMaul, ns1:DarthVader, ns1:DexterJettster, ns1:Dooku, ns1:Dorme, ns1:DudBolt, ns1:EethKoth, ns1:FinisValorum, ns1:Finn, ns1:Gasgano, ns1:Greedo, ns1:GregarTypho, ns1:Grievous, ns1:HanSolo, ns1:IG88, ns1:JabbaDesilijicTiure, ns1:JangoFett, ns1:JarJarBinks, ns1:JekTonoPorkins, ns1:JocastaNu, ns1:KiAdiMundi, ns1:KitFisto, ns1:LamaSu, ns1:LandoCalrissian, ns1:LeiaOrgana, ns1:Lobot, ns1:LukeSkywalker, ns1:LuminaraUnduli, ns1:MaceWindu, ns1:MasAmedda, ns1:MonMothma, ns1:NienNunb, ns1:NuteGunray, ns1:ObiWanKenobi, ns1:OwenLars, ns1:PadmeAmidala, ns1:Palpatine, ns1:PloKoon, ns1:PoeDameron, ns1:PoggletheLesser, ns1:QuarshPanaka, ns1:QuiGonJinn, ns1:R2D2, ns1:R4P17, ns1:R5D4, ns1:RattsTyerel, ns1:RaymusAntilles, ns1:Rey, ns1:RicOlie, ns1:RoosTarpals, ns1:RugorNass, ns1:SaeseeTiin, ns1:SanHill, ns1:Sebulba, ns1:ShaakTi, ns1:ShmiSkywalker, ns1:SlyMoore, ns1:Tarfful, ns1:TaunWe, ns1:TionMedon, ns1:WatTambor, ns1:Watto, ns1:WedgeAntilles, ns1:WicketSystriWarrick, ns1:WilhuffTarkin, ns1:YaraelPoof, ns1:Yoda, ns1:ZamWesell .
+
+
+ns1:TheForceAwakens a ns1:Film ;
+  ns1:title "Star Wars: Episode VII - The Force Awakens" ;
+  ns1:releaseYear 2015 ;
+  ns1:directedBy ns1:J.J.Abrams ;
+  ns1:includesCharacter ns1:Ackbar, ns1:BB8, ns1:BalaTik, ns1:BazineNetal, ns1:CaptainPhasma, ns1:C3PO, ns1:Chewbacca, ns1:ConstableZuvio, ns1:DarthVader, ns1:ElloAsty, ns1:Finn, ns1:GeneralHux, ns1:HanSolo, ns1:KyloRen, ns1:LorSanTekka, ns1:MazKanata, ns1:PoeDameron, ns1:PrincessLeia, ns1:R2D2, ns1:Rey, ns1:Snoke, ns1:SnapWexley, ns1:Teedo, ns1:UnkarPlutt .
+
+#Characters
+ns1:Ackbar a ns1:Character ; ns1:name "Ackbar" .
+ns1:AdiGallia a ns1:Character ; ns1:name "Adi Gallia" .
+ns1:AnakinSkywalker a ns1:Character ; ns1:name "Anakin Skywalker" .
+ns1:ArvelCrynyd a ns1:Character ; ns1:name "Arvel Crynyd" .
+ns1:AylaSecura a ns1:Character ; ns1:name "Ayla Secura" .
+ns1:BailPrestorOrgana a ns1:Character ; ns1:name "Bail Prestor Organa" .
+ns1:BarrissOffee a ns1:Character ; ns1:name "Barriss Offee" .
+ns1:BB8 a ns1:Character ; ns1:name "BB-8" .
+ns1:BenQuadinaros a ns1:Character ; ns1:name "Ben Quadinaros" .
+ns1:BeruWhitesunLars a ns1:Character ; ns1:name "Beru Whitesun Lars" .
+ns1:BibFortuna a ns1:Character ; ns1:name "Bib Fortuna" .
+ns1:BiggsDarklighter a ns1:Character ; ns1:name "Biggs Darklighter" .
+ns1:BobaFett a ns1:Character ; ns1:name "Boba Fett" .
+ns1:Bossk a ns1:Character ; ns1:name "Bossk" .
+ns1:C3PO a ns1:Character ; ns1:name "C-3PO" .
+ns1:CaptainPhasma a ns1:Character ; ns1:name "Captain Phasma" .
+ns1:Chewbacca a ns1:Character ; ns1:name "Chewbacca" .
+ns1:ClieggLars a ns1:Character ; ns1:name "Cliegg Lars" .
+ns1:Cordé a ns1:Character ; ns1:name "Cordé" .
+ns1:DarthMaul a ns1:Character ; ns1:name "Darth Maul" .
+ns1:DarthVader a ns1:Character ; ns1:name "Darth Vader" .
+ns1:DexterJettster a ns1:Character ; ns1:name "Dexter Jettster" .
+ns1:Dooku a ns1:Character ; ns1:name "Dooku" .
+ns1:Dormé a ns1:Character ; ns1:name "Dormé" .
+ns1:DudBolt a ns1:Character ; ns1:name "Dud Bolt" .
+ns1:EethKoth a ns1:Character ; ns1:name "Eeth Koth" .
+ns1:FinisValorum a ns1:Character ; ns1:name "Finis Valorum" .
+ns1:Finn a ns1:Character ; ns1:name "Finn" .
+ns1:Gasgano a ns1:Character ; ns1:name "Gasgano" .
+ns1:Greedo a ns1:Character ; ns1:name "Greedo" .
+ns1:GregarTypho a ns1:Character ; ns1:name "Gregar Typho" .
+ns1:Grievous a ns1:Character ; ns1:name "Grievous" .
+ns1:HanSolo a ns1:Character ; ns1:name "Han Solo" .
+ns1:IG88 a ns1:Character ; ns1:name "IG-88" .
+ns1:JabbaDesilijicTiure a ns1:Character ; ns1:name "Jabba Desilijic Tiure" .
+ns1:JangoFett a ns1:Character ; ns1:name "Jango Fett" .
+ns1:JarJarBinks a ns1:Character ; ns1:name "Jar Jar Binks" .
+ns1:JekTonoPorkins a ns1:Character ; ns1:name "Jek Tono Porkins" .
+ns1:JocastaNu a ns1:Character ; ns1:name "Jocasta Nu" .
+ns1:KiAdiMundi a ns1:Character ; ns1:name "Ki-Adi-Mundi" .
+ns1:KitFisto a ns1:Character ; ns1:name "Kit Fisto" .
+ns1:LamaSu a ns1:Character ; ns1:name "Lama Su" .
+ns1:LandoCalrissian a ns1:Character ; ns1:name "Lando Calrissian" .
+ns1:LeiaOrgana a ns1:Character ; ns1:name "Leia Organa" .
+ns1:Lobot a ns1:Character ; ns1:name "Lobot" .
+ns1:LukeSkywalker a ns1:Character ; ns1:name "Luke Skywalker" .
+ns1:LuminaraUnduli a ns1:Character ; ns1:name "Luminara Unduli" .
+ns1:MaceWindu a ns1:Character ; ns1:name "Mace Windu" .
+ns1:MasAmedda a ns1:Character ; ns1:name "Mas Amedda" .
+ns1:MonMothma a ns1:Character ; ns1:name "Mon Mothma" .
+ns1:NienNunb a ns1:Character ; ns1:name "Nien Nunb" .
+ns1:NuteGunray a ns1:Character ; ns1:name "Nute Gunray" .
+ns1:ObiWanKenobi a ns1:Character ; ns1:name "Obi-Wan Kenobi" .
+ns1:OwenLars a ns1:Character ; ns1:name "Owen Lars" .
+ns1:PadmeAmidala a ns1:Character ; ns1:name "Padmé Amidala" .
+ns1:Palpatine a ns1:Character ; ns1:name "Palpatine" .
+ns1:PloKoon a ns1:Character ; ns1:name "Plo Koon" .
+ns1:PoeDameron a ns1:Character ; ns1:name "Poe Dameron" .
+ns1:PoggletheLesser a ns1:Character ; ns1:name "Poggle the Lesser" .
+ns1:QuarshPanaka a ns1:Character ; ns1:name "Quarsh Panaka" .
+ns1:QuiGonJinn a ns1:Character ; ns1:name "Qui-Gon Jinn" .
+ns1:R2D2 a ns1:Character ; ns1:name "R2-D2" .
+ns1:R4P17 a ns1:Character ; ns1:name "R4-P17" .
+ns1:R5D4 a ns1:Character ; ns1:name "R5-D4" .
+ns1:RattsTyerel a ns1:Character ; ns1:name "Ratts Tyerel" .
+ns1:RaymusAntilles a ns1:Character ; ns1:name "Raymus Antilles" .
+ns1:Rey a ns1:Character ; ns1:name "Rey" .
+ns1:RicOlie a ns1:Character ; ns1:name "Ric Olie" .
+ns1:RoosTarpals a ns1:Character ; ns1:name "Roos Tarpals" .
+ns1:RugorNass a ns1:Character ; ns1:name "Rugor Nass" .
+ns1:SaeseeTiin a ns1:Character ; ns1:name "Saesee Tiin" .
+ns1:SanHill a ns1:Character ; ns1:name "San Hill" .
+ns1:Sebulba a ns1:Character ; ns1:name "Sebulba" .
+ns1:ShaakTi a ns1:Character ; ns1:name "Shaak Ti" .
+ns1:ShmiSkywalker a ns1:Character ; ns1:name "Shmi Skywalker" .
+ns1:SlyMoore a ns1:Character ; ns1:name "Sly Moore" .
+ns1:Tarfful a ns1:Character ; ns1:name "Tarfful" .
+ns1:TaunWe a ns1:Character ; ns1:name "Taun We" .
+ns1:TionMedon a ns1:Character ; ns1:name "Tion Medon" .
+ns1:WatTambor a ns1:Character ; ns1:name "Wat Tambor" .
+ns1:Watto a ns1:Character ; ns1:name "Watto" .
+ns1:WedgeAntilles a ns1:Character ; ns1:name "Wedge Antilles" .
+ns1:WicketSystriWarrick a ns1:Character ; ns1:name "Wicket Systri Warrick" .
+ns1:WilhuffTarkin a ns1:Character ; ns1:name "Wilhuff Tarkin" .
+ns1:YaraelPoof a ns1:Character ; ns1:name "Yarael Poof" .
+ns1:Yoda a ns1:Character ; ns1:name "Yoda" .
+ns1:ZamWesell a ns1:Character ; ns1:name "Zam Wesell" .
+
+
